@@ -1,7 +1,7 @@
-/* ---------- ПІДКЛЮЧЕННЯ ШРИФТІВ ---------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Pacifico&display=swap');
 
-/* ---------- БАЗОВІ НАЛАШТУВАННЯ ---------- */
+
 body {
     margin: 0;
     padding: 0;
@@ -10,14 +10,12 @@ body {
     color: #03045e;
 }
 
-/* Заголовки */
+
 h1, h2, h3, h4 {
     font-family: 'Pacifico', cursive;
     color: #03045e;
     margin: 0;
 }
-
-/* Посилання */
 a {
     text-decoration: none;
     color: #023e8a;
@@ -26,7 +24,7 @@ a:hover {
     color: #0077b6;
 }
 
-/* ---------- NAVBAR ---------- */
+
 .navbar {
     width: 100%;
     background: #03045e;
@@ -77,7 +75,7 @@ a:hover {
     background: #0096c7;
 }
 
-/* ---------- HERO ---------- */
+
 .hero {
     text-align: center;
     padding: 60px 20px;
@@ -97,7 +95,6 @@ a:hover {
     font-size: 24px;
 }
 
-/* ---------- FEATURES ---------- */
 .features {
     padding: 50px 20px;
     text-align: center;
@@ -143,7 +140,7 @@ a:hover {
     margin-bottom: 10px;
 }
 
-/* ---------- FLOATING ICONS ---------- */
+
 .floating-icons {
     position: fixed;
     right: 25px;
@@ -169,7 +166,6 @@ a:hover {
     background: #0096c7;
 }
 
-/* ---------- FOOTER ---------- */
 .footer {
     background: #03045e;
     color: #ade8f4;
