@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EnglishPro</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel ="icon" href="/static/src/icon.svg">
 </head>
 
 <body>
 
-
+    <!-- Навігація -->
     <nav class="navbar">
         <div class="nav-left">
             <div class="logo">
-                <span class="logo-icon">📘</span>
+                <span class="logo-icon"><img src="/static/src/icon.svg"></span>
                 <span class="logo-text">EnglishPro</span>
             </div>
 
@@ -26,17 +27,16 @@
         </div>
 
         <div class="nav-right">
-            <button class="login-btn">Увійти</button>
+            <button class="login-btn"><a href= "/templates/login.html"><img href="/static/src/arrow-left-right.svg">Увійти</a></button>
         </div>
     </nav>
+    
 
 
+
+
+    <!-- Головний блок -->
     <section class="hero">
-
-
-        <img src="img/teaching.png" alt="Викладач англійської мови" class="hero-image">
-
-        <h1>Вивчення англійської мови стало простішим</h1>
         <p>
             Англійська мова відкриває двері до нових можливостей у кар’єрі, освіті та подорожах.
             Наша платформа пропонує інтерактивний та ефективний підхід до вивчення англійської мови,
@@ -47,6 +47,8 @@
         </p>
     </section>
 
+
+    <!-- Можливості -->
     <section class="features">
         <h2 class="features-title">Можливості платформи</h2>
         <p class="features-subtitle">Всебічний підхід до вивчення англійської мови</p>
@@ -55,41 +57,31 @@
             <div class="card">
                 <div class="card-icon">🔤</div>
                 <h3>Вивчення слів</h3>
-                <p>
-                    Навчайтеся новим словам у двох напрямах: англійсько-українська та українсько-англійська.
-                    Інтерактивні картки допоможуть швидко запам’ятати лексику.
-                </p>
+                <p>Навчайтеся новим словам у двох напрямах: англійсько-українська та українсько-англійська.</p>
             </div>
 
             <div class="card">
                 <div class="card-icon">🎧</div>
                 <h3>Аудіювання</h3>
-                <p>
-                    Тренуйте навички сприйняття англійської мови на слух.
-                    Слухайте правильну вимову слів та речень від носіїв мови.
-                </p>
+                <p>Тренуйте навички сприйняття англійської мови на слух.</p>
             </div>
 
             <div class="card">
                 <div class="card-icon">📘</div>
                 <h3>Граматика</h3>
-                <p>
-                    Опановуйте правила побудови речень в англійській мові.
-                    Зрозумілі пояснення та практичні вправи для закріплення знань.
-                </p>
+                <p>Опановуйте правила побудови речень в англійській мові.</p>
             </div>
 
             <div class="card">
                 <div class="card-icon">⏱️</div>
                 <h3>Дієслова та часи</h3>
-                <p>
-                    Вивчайте англійські дієслова в різних часових формах.
-                    Розбирайте Present, Past, Future та Perfect tenses з прикладами та вправами.
-                </p>
+                <p>Вивчайте англійські дієслова в різних часових формах.</p>
             </div>
         </div>
     </section>
 
+
+    <!-- Плаваючі іконки -->
     <div class="floating-icons">
         <div class="icon">🌐</div>
         <div class="icon">🎵</div>
@@ -98,6 +90,7 @@
     </div>
 
 
+    <!-- Футер -->
     <footer class="footer">
         <div class="footer-content">
 
@@ -106,11 +99,8 @@
                     <span class="logo-icon">📘</span>
                     <span class="logo-text">EnglishPro</span>
                 </div>
-                <p class="footer-desc">
-                    Ваш надійний партнер у вивченні англійської мови.
-                </p>
+                <p class="footer-desc">Ваш надійний партнер у вивченні англійської мови.</p>
             </div>
-
 
             <div class="footer-col">
                 <h4>Можливості</h4>
@@ -122,7 +112,6 @@
                 </ul>
             </div>
 
-
             <div class="footer-col">
                 <h4>Контакти</h4>
                 <ul>
@@ -132,7 +121,6 @@
                 </ul>
             </div>
 
-            
             <div class="footer-col footer-socials">
                 <h4>Соцмережі</h4>
                 <div class="social-icons">
@@ -150,5 +138,8 @@
         </div>
     </footer>
 
-</body>
-</html>
+
+
+
+
+

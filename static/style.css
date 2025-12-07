@@ -1,23 +1,22 @@
-/* ---------- ПІДКЛЮЧЕННЯ ШРИФТІВ ---------- */
+
 @import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Pacifico&display=swap');
 
-/* ---------- БАЗОВІ НАЛАШТУВАННЯ ---------- */
+
 body {
     margin: 0;
     padding: 0;
     background: #90e0ef;
     font-family: 'Caveat', cursive;
     color: #03045e;
+    width: 100%;
 }
 
-/* Заголовки */
+
 h1, h2, h3, h4 {
     font-family: 'Pacifico', cursive;
     color: #03045e;
     margin: 0;
 }
-
-/* Посилання */
 a {
     text-decoration: none;
     color: #023e8a;
@@ -26,9 +25,9 @@ a:hover {
     color: #0077b6;
 }
 
-/* ---------- NAVBAR ---------- */
+
 .navbar {
-    width: 100%;
+    width: 95%;
     background: #03045e;
     color: white;
     padding: 15px 40px;
@@ -49,6 +48,11 @@ a:hover {
     gap: 10px;
     color: #ade8f4;
     font-size: 22px;
+}
+
+.logo-icon img {
+    width: 10%;
+    height: auto;
 }
 
 .nav-menu {
@@ -77,7 +81,7 @@ a:hover {
     background: #0096c7;
 }
 
-/* ---------- HERO ---------- */
+
 .hero {
     text-align: center;
     padding: 60px 20px;
@@ -97,7 +101,6 @@ a:hover {
     font-size: 24px;
 }
 
-/* ---------- FEATURES ---------- */
 .features {
     padding: 50px 20px;
     text-align: center;
@@ -143,7 +146,7 @@ a:hover {
     margin-bottom: 10px;
 }
 
-/* ---------- FLOATING ICONS ---------- */
+
 .floating-icons {
     position: fixed;
     right: 25px;
@@ -169,7 +172,6 @@ a:hover {
     background: #0096c7;
 }
 
-/* ---------- FOOTER ---------- */
 .footer {
     background: #03045e;
     color: #ade8f4;
@@ -230,4 +232,23 @@ a:hover {
     font-size: 20px;
     color: #90e0ef;
     padding-top: 10px;
+}
+
+/* Logo */
+.logo-reg {
+    width: 70%;
+    margin: 50px 15%;
+}
+.logo-reg a {
+
+}
+.logo-form {
+    text-align: center;
+    background-color: white;
+    border: #0077b6 solid 5px;
+    border-radius: 15px;
+    padding: 15px;
+}
+.logo-form img {
+    width: 10%;
 }
