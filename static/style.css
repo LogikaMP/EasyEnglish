@@ -8,6 +8,7 @@ body {
     background: #90e0ef;
     font-family: 'Caveat', cursive;
     color: #03045e;
+    width: 100%;
 }
 
 
@@ -26,10 +27,10 @@ a:hover {
 
 
 .navbar {
-    width: 100%;
+    width: 95%;
     background: #03045e;
     color: white;
-    padding: 15px 40px;
+    padding: 15px 95px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,6 +50,10 @@ a:hover {
     font-size: 22px;
 }
 
+.logo-icon img {
+    width: 10%;
+    height: auto;
+}
 .nav-menu {
     list-style: none;
     display: flex;
@@ -226,4 +231,25 @@ a:hover {
     font-size: 20px;
     color: #90e0ef;
     padding-top: 10px;
+}
+/* Logo */
+.logo-reg{
+    width: 70%;
+    margin: 50px 15%;
+}
+.logo-reg a{
+
+}
+
+.logo-form{
+    text-align: center;
+    background-color: #ffffff;
+    border:#03045e 3px solid;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.logo-form img{
+    width: 20%;
+    height: auto;
 }
