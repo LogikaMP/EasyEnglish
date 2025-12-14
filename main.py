@@ -14,5 +14,9 @@ def login():
 def register():
     return render_template('register.html')
 
+@app.route('/cabinet')
+def cabinet():  
+    return render_template('cabinet.html')      
+
 if __name__ == '__main__':
     app.run(debug=True)

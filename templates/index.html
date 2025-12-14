@@ -3,23 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyEnglish</title>
+    <title>EnglishPro</title>
     <link rel="stylesheet" href="/static/style.css">
-    <link rel="icon" href="/static/src/icon.svg" type="image/x-icon">
 </head>
 
 <body>
 
-    <!-- Навігація -->
-    <nav class="navbar">
 
+    <nav class="navbar">
+        <div class="nav-left">
             <div class="logo">
-                <span class="logo-icon"><img src="/static/src/icon.svg"></span>
-                <div>
-                <span class="logo-text">EasyEnglish</span>
-                <br>
-                <span class="logo-tagline">Вивчай англійську легко</span>
-                </div>
+                <span class="logo-icon">📘</span>
+                <span class="logo-text">EnglishPro</span>
             </div>
 
             <ul class="nav-menu">
@@ -28,18 +23,18 @@
                 <li><a href="#">Навчання</a></li>
                 <li><a href="#">Контакти</a></li>
             </ul>
+        </div>
 
-
-            <a class="login-btn" href= "login"><img src="/static/src/log-in.svg">Увійти</a>
-
+        <div class="nav-right">
+            <button class="login-btn">Увійти</button>
+        </div>
     </nav>
-    
 
 
-
-
-    <!-- Головний блок -->
     <section class="hero">
+
+
+        <img src="img/teaching.png" alt="Викладач англійської мови" class="hero-image">
 
         <h1>Вивчення англійської мови стало простішим</h1>
         <p>
@@ -52,62 +47,72 @@
         </p>
     </section>
 
-
-    <!-- Можливості -->
     <section class="features">
         <h2 class="features-title">Можливості платформи</h2>
         <p class="features-subtitle">Всебічний підхід до вивчення англійської мови</p>
 
         <div class="cards">
             <div class="card">
-                <div class="card-icon"><img src="/static/src/languages.svg"></div>
+                <div class="card-icon">🔤</div>
                 <h3>Вивчення слів</h3>
-                <p>Навчайтесь новим словам у двох напрямках: англійська-українська та українська-англійська. Інтерактивні картки допоможуть швидко запам'ятати лексику.</p>
+                <p>
+                    Навчайтеся новим словам у двох напрямах: англійсько-українська та українсько-англійська.
+                    Інтерактивні картки допоможуть швидко запам’ятати лексику.
+                </p>
             </div>
 
             <div class="card">
-                <div class="card-icon"><img src="/static/src/headphones.svg"></div>
+                <div class="card-icon">🎧</div>
                 <h3>Аудіювання</h3>
-                <p>Тренуйте навички сприйняття англійської мови на слух. Слухайте правильну вимову слів та речень від носіїв мови.</p>
+                <p>
+                    Тренуйте навички сприйняття англійської мови на слух.
+                    Слухайте правильну вимову слів та речень від носіїв мови.
+                </p>
             </div>
 
             <div class="card">
-                <div class="card-icon"><img src="/static/src/book-text.svg"></div>
+                <div class="card-icon">📘</div>
                 <h3>Граматика</h3>
-                <p>Опановуйте правила побудови речень в англійській мові. Зрозумілі пояснення та практичні вправи для закріплення знань.</p>
+                <p>
+                    Опановуйте правила побудови речень в англійській мові.
+                    Зрозумілі пояснення та практичні вправи для закріплення знань.
+                </p>
             </div>
 
             <div class="card">
-                <div class="card-icon"><img src="/static/src/clock.svg"></div>
+                <div class="card-icon">⏱️</div>
                 <h3>Дієслова та часи</h3>
-                <p>Вивчайте англійські дієслова в різних часових формах. Розбирайте Present, Past, Future та Perfect tenses з прикладами та вправами.</p>
+                <p>
+                    Вивчайте англійські дієслова в різних часових формах.
+                    Розбирайте Present, Past, Future та Perfect tenses з прикладами та вправами.
+                </p>
             </div>
         </div>
     </section>
 
-
-    <!-- Плаваючі іконки -->
     <div class="floating-icons">
-        <div class="icon"><img src="/static/src/languages.svg"></div>
-        <div class="icon"><img src="/static/src/headphones.svg"></div>
-        <div class="icon"><img src="/static/src/book-text.svg"></div>
-        <div class="icon"><img src="/static/src/clock.svg"></div>
+        <div class="icon">🌐</div>
+        <div class="icon">🎵</div>
+        <div class="icon">📄</div>
+        <div class="icon">⏳</div>
     </div>
 
 
-    <!-- Футер -->
     <footer class="footer">
         <div class="footer-content">
 
             <div class="footer-col footer-brand">
                 <div class="footer-logo">
-                    <span class="logo-icon"><img src="/static/src/icon.svg"></span>
-                    <span class="logo-text">EasyEnglish</span>
+                    <span class="logo-icon">📘</span>
+                    <span class="logo-text">EnglishPro</span>
                 </div>
-                <p class="footer-desc">Ваш надійний партнер у вивченні англійської мови.</p>
+                <p class="footer-desc">
+                    Ваш надійний партнер у вивченні англійської мови.
+                </p>
             </div>
 
-            <div class="footer-list">
+
+            <div class="footer-col">
                 <h4>Можливості</h4>
                 <ul>
                     <li><a href="#">Вивчення слів</a></li>
@@ -117,34 +122,33 @@
                 </ul>
             </div>
 
-            <div class="footer-cont">
+
+            <div class="footer-col">
                 <h4>Контакти</h4>
                 <ul>
-                    <li><img src="/static/src/mail.svg"> info@EasyEnglish.ua</li>
-                    <li><img src="/static/src/phone.svg"> +380 (44) 123-45-67</li>
-                    <li><img src="/static/src/map-pin.svg"> Київ, Україна</li>
+                    <li>📧 info@englishpro.ua</li>
+                    <li>📞 +380 (44) 123-45-67</li>
+                    <li>📍 Київ, Україна</li>
                 </ul>
             </div>
 
-
-        </div>
-
-        <div class="footer-bottom">
-            © 2025 EasyEnglish. Всі права захищені.
             
             <div class="footer-col footer-socials">
                 <h4>Соцмережі</h4>
                 <div class="social-icons">
-                    <a href="#"><img src="/static/src/facebook.svg"></a>
-                    <a href="#"><img src="/static/src/instagram.svg"></a>
-                    <a href="#"><img src="/static/src/twitter.svg"></a>
+                    <a href="#">🌐</a>
+                    <a href="#">🐦</a>
+                    <a href="#">📘</a>
+                    <a href="#">📸</a>
                 </div>
             </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            © 2025 EnglishPro. Всі права захищені.
         </div>
     </footer>
 
-
-
-
-
-
+</body>
+</html>
