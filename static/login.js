@@ -14,4 +14,6 @@ btn.addEventListener('click',function(){
             // додати анімацію успішной авторизації
             window.location.assign('/cabinet')
         }}
+        document.querySelector('.error').innerText = "Невірний email або пароль"
 })
+
