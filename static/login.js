@@ -13,5 +13,8 @@ btn.addEventListener('click',function(){
         if(email == user && password == all_users[user]){
             // додати анімацію успішной авторизації
             window.location.assign('/cabinet')
-        }}
+        }
+    }
+    document.querySelector('.error').innerHTML = "Перевірте логін та пароль"
+
 })
