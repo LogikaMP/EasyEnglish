@@ -409,3 +409,7 @@ input::placeholder{
 .register-link{
     font-size: 15px;
 }
+
+.error{
+    color:red
+}
