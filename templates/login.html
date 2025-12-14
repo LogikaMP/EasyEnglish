@@ -5,31 +5,29 @@
     <link rel ="icon" href="/static/src/icon.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> EasyEnglish</title>
+    <title> EnglishPro100</title>
 </head>
 <body>
     <div class = "logo-reg">
-        <a href="/" class="btn-back"><img src = "/static/src/arrow-left.svg">Назад на головну</a>
+        <a href="index.html"><img src = "/static/src/arrow-left.svg">Back to main</a>
     <div class = "logo-form">
         <img src = "/static/src/icon.svg">
-        <h2>Вхід в EasyEnglish</h2>
+        <h1>Вхід в EnglishPro100</h1>
         <p>Увійдіть до свого облікового запису</p>
-        <form class="login-form">
+        <form>
             <label for="email">Веди пошту</label>
             <div class="input">
                 <img src = "/static/src/mail.svg">
-                <input type="email" id = "email" class = "email" name = "email" required placeholder="Веди пошту">
+                <input type="email" id = "email" class = "email" name = "email" required>
             </div>
             <label for="password">Веди пароль</label>
             <div class="input">
                 <img src = "/static/src/lock.svg">
-                <input type="password" id = "password" class = "password" name = "password" required placeholder="Веди пароль">
+                <input type="password" id = "password" class = "password" name = "password" required>
             </div>
-            <div class="btn-login">Увійти</div>
+            <button type="submit">Увійти</button>
         </form>
-        <p class="register-link">Ще немає облікового запису? <a href="/register">Зареєструватися</a></p>
         </div>
     </div>
-    <script src="/static/login.js" defer></script>
 </body>
 </html>
