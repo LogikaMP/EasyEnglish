@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel ="icon" href="/static/src/icon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> EasyEnglish</title>
+</head>
+<body>
+    <div class = "logo-reg">
+        <a href="/" class="btn-back"><img src = "/static/src/arrow-left.svg">Назад на головну</a>
+    <div class = "logo-form">
+        <img src = "/static/src/icon.svg">
+        <h2>Вхід в EasyEnglish</h2>
+        <p>Увійдіть до свого облікового запису</p>
+        <p class="error"></p>
+        <form class="login-form">
+            <label for="email">Веди пошту</label>
+            <div class="input">
+                <img src = "/static/src/mail.svg">
+                <input type="email" id = "email" class = "email" name = "email" required placeholder="Веди пошту">
+            </div>
+            <label for="password">Веди пароль</label>
+            <div class="input">
+                <img src = "/static/src/lock.svg">
+                <input type="password" id = "password" class = "password" name = "password" required placeholder="Веди пароль">
+            </div>
+            <div type="submit" class="btn-login">Увійти</div>
+        </form>
+        <p class="register-link">Ще немає облікового запису? <a href="/register">Зареєструватися</a></p>
+        </div>
+    </div>
+    <script src = "/static/login.js" defer></script>
+</body>
+</html>
