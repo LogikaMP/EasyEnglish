@@ -428,7 +428,7 @@ input::placeholder{
     height: 100%;
 }
 
-.logo { 
+.sidebar .logo { 
     width: 75%;
     padding: 15px 10%; 
     font-weight: bold; 
@@ -437,7 +437,7 @@ input::placeholder{
     border-bottom: 2px solid #ade8f4;
    
 }
-.logo img{
+.sidebar .logo img{
     width: 30%;
     height: auto;
 }
