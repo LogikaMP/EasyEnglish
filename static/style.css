@@ -414,99 +414,267 @@ input::placeholder{
     color: red
 }
 
-/* cabinet */
-/* Приховуємо радіокнопки */
+/*стилі для карток*/
+/* все спільне */
 
-/* САЙДБАР */
-.sidebar {
-    width: 25%;
-    background-color: #000055;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    font-size: 1.4em;
-    height: 100%;
+.test.page {
+    width: 900px;
+    background: #c9f2f8;
+    padding: 30px;
+    font-family: "Segoe UI", sans-serif;
 }
 
-.logo { 
-    width: 75%;
-    padding: 15px 10%; 
-    font-weight: bold; 
-    font-size: 1em;
-    color: white;
-    border-bottom: 2px solid #ade8f4;
-   
-}
-.logo img{
-    width: 30%;
-    height: auto;
-}
-.user-profile{
+.test.header {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    width: 75%;
-     border-radius: 10px;
-     background-color: #023e8a;
-     padding: 5px;
-     margin: 20px 10%;
-     font-size: 0.8em;
+    color: #0b2c5d;
 }
-.avatar{
-    border-radius: 50%;
-    background-color: #90e0ef;
-    width: 50px;
-    height: 50px;
+
+.test.stats {
     display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.avatar img, .menu-item img{
-    width: 30px;
-    height: 30px;
-    filter: invert(1);
-    
-}
-.user-info{
-    display: flex;
-    flex-direction: column;
-}
-.user-info p{
-    margin: 0;
-}
-.menu{
-    display: flex;
-    text-align: left;
-    color: white;
-    flex-direction: column;
     gap: 20px;
-    font-size: 0.9em;
-    justify-content: flex-start;
-    padding: 30px 10%;
-    border-bottom: 2px solid #ade8f4;
-    border-top: 2px solid #ade8f4;
+    margin-top: 20px;
 }
-.menu p{
-    margin: 0;
+
+.test.card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    width: 100%;
+    color: #0b2c5d;
 }
-/* КОНТЕНТ */
-.content-area {
-    width: 85%;
-    margin-left: 30%;
-    flex-grow: 1;
+
+.test.card span {
+    font-size: 26px;
+    font-weight: 600;
+}
+
+.test.divider {
+    height: 10px;
+    background: #4fbcd8;
+    border-radius: 20px;
+    margin: 30px 0;
+}
+
+.test.main {
+    background: #fff;
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+}
+
+.test.label {
+    color: #0b2c5d;
+}
+
+
+.test.input {
+    width: 80%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 2px solid #b7ecf3;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.test.input:focus {
+    outline: none;
+    border-color: #4fbcd8;
+}
+
+/* кнопки і анімація */
+
+.test.button {
+    margin-top: 20px;
+    padding: 14px 36px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.test.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.test.button.primary {
+    background: #0b2c5d;
+    color: #fff;
+}
+
+.test.button.primary:hover {
+    background: #123a7a;
+}
+
+.test.button.secondary {
+    background: #0a7bbd;
+    color: #fff;
+}
+
+/* для слів */
+
+.word .current {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 20px 0;
+    color: #0b2c5d;
+}
+
+/* для аудіо */
+
+.audio .level {
+    display: inline-block;
+    background: #14b8c4;
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.audio .level:hover{
+    background: #123a7a;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.audio .sentence {
+    background: #d9f7fb;
+    padding: 18px;
+    border-radius: 14px;
+    margin: 20px 0;
+    color: #0b2c5d;
+}
+
+/* для дієслів */
+
+.verbs-title {
+    color: #0b2c5d;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.verbs-tabs {
+    display: flex;
+    background: #bfeef8;
+    border-radius: 20px;
+    padding: 6px;
+    margin-bottom: 20px;
+}
+
+.verbs-tab {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    border-radius: 14px;
+    cursor: pointer;
+    color: #0b2c5d;
+}
+
+.verbs-tab.active {
+    background: #0b7db6;
+    color: #fff;
+}
+
+.verbs-header {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #0b2c5d;
+}
+
+.verbs-icon {
+    width: 36px;
+    height: 36px;
+    background: #0b7db6;
+    color: #fff;
+    border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    text-align: left;
-}
-.menu-item{
-    display: flex;
-    text-align: left;
-    gap: 15px;
-}
-.logout-section{
-    width: 75%;
-    padding: 10px 10%;
 }
 
-/*  */
+.verbs-example {
+    background: #c9f2fb;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.verbs-task {
+    margin-bottom: 12px;
+    color: #0b2c5d;
+}
+
+.verbs-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.verbs-row label {
+    width: 50px;
+    font-weight: 500;
+    color: #0b2c5d;
+}
+
+/* прогрес бар */
+
+.test.progress-bar {
+    height: 10px;
+    background: #aee7ef;
+    border-radius: 20px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.test.progress-fill {
+    width: 35%;
+    height: 100%;
+    background: #0b2c5d;
+}
+
+/*для граматики*/
+
+.grammar-page {
+    background: #d9f7fb;
+}
+
+.grammar-sentence {
+    text-align: center;
+}
+
+.grammar-words {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.grammar-word {
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: 2px solid #8fe3f2;
+    background: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.grammar-word:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.grammar-word.active {
+    background: #0b7db6;
+    color: #fff;
+    border-color: #0b7db6;
+}
