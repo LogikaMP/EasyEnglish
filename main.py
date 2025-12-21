@@ -26,7 +26,7 @@ def register():
 
     return render_template('register.html')
 
-app.route("/cabinet")
+@app.route("/cabinet")
 def cabinet():
     return render_template("cabinet.html")
 
