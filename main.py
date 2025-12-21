@@ -15,7 +15,8 @@ def login():
 def register():
     if request.method == "POST":
         new_user = request.get_json()
-        with open("static/data/user,json", "r")as f:
+        print(new_user)
+        with open("static/data/user.json", "r")as f:
             all_users = json.load(f)
         all_users.update(new_user)
 

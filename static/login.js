@@ -1,19 +1,20 @@
-let all_user
-fetch("/static/data/user.json").then(function(res){
-    return res.json()
-}).then(function(data){all_user = data
-    })
-    
-let btn = document.querySelector(".btn-login")
-btn.addEventListener("click",function(){
-    let email = document.getElementById("email").value 
-    let password= document.getElementById("password").value 
-    for(let user in  all_user){
-        if(email == user && password == all_user[user]){
-            // НЕМЕНІ ДОДАТИ АНІМАЦІЮ АВТОРИЗАЦІЯ УСПІШНА 
-            window.location.assign("/cabinet")
+let all_user 
+fetch("/static/data/user.json")
+  .then(response => response.json())
+  .then(data => {
+    all_user = data;
+  });
+
+  let emeilInput = document.getElementById("email").value 
+  let passwortInput = document.getElementById("password").value 
+
+  document.querySelector(".btn-login").addEventListener("click",function(){
+    for (let user in all_user){
+        if (all_user[user].email === emeilInput && all_user[user].password === passwortInput){
+        window.location.esigen("/cabinet")
+        }
+        else{
+            document.querySelector(".error").innerHTML = "Невірний логін чи пароль"
         }
     }
-    document.querySelector(".error").innerHTML = "Перевірте логін і пароль"
-
 })
