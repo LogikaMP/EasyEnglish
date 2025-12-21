@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 let all_users = []
 
 // завантаження користувачів
@@ -16,13 +15,12 @@ btn.addEventListener('click', function () {
     let error = document.querySelector('.error')
 
     error.innerHTML = ""
-
     let success = false
 
-    // перевірка логіна
     for (let user of all_users) {
         if (user.email === email && user.password === password) {
             success = true
+            localStorage.setItem("user", email)
             break
         }
     }
@@ -30,11 +28,10 @@ btn.addEventListener('click', function () {
     if (success) {
         animeSuccess()
     } else {
-        error.innerHTML = "Невірна пошта або пароль"
+        error.innerHTML = "Перевірте логін і пароль"
         animeError(error)
     }
 })
-
 
 function animeError(el) {
     let pos = 0
@@ -48,7 +45,6 @@ function animeError(el) {
         el.style.transform = 'translateX(0)'
     }, 300)
 }
-
 
 function animeSuccess() {
     let overlay = document.querySelector('.success-overlay')
@@ -77,25 +73,3 @@ function animeSuccess() {
         window.location.assign('/cabinet')
     }, 2000)
 }
-=======
-let all_user
-fetch("/static/data/user.json").then(function(res){
-    return res.json()
-}).then(function(data){all_user = data
-    })
-    
-let btn = document.querySelector(".btn-login")
-btn.addEventListener("click",function(){
-    let email = document.getElementById("email").value 
-    let password= document.getElementById("password").value 
-    for(let user in  all_user){
-        if(email == user && password == all_user[user]){
-            // НЕМЕНІ ДОДАТИ АНІМАЦІЮ АВТОРИЗАЦІЯ УСПІШНА 
-            localStorage.setItem("user", email)
-            window.location.assign("/cabinet")
-        }
-    }
-    document.querySelector(".error").innerHTML = "Перевірте логін і пароль"
-
-})
->>>>>>> 967d631ab4fc2f14a033cac7736fb788ce240b6a

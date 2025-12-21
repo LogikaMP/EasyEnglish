@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 let all_users = []
 
 // отримуємо користувачів
@@ -17,18 +16,11 @@ btn.addEventListener('click', function () {
 
     error.innerHTML = ""
 
-    let exist = false
-
     // перевірка чи існує користувач
-    for (let user of all_users) {
-        if (user.email === email) {
-            exist = true
-            break
-        }
-    }
+    let exist = all_users.some(user => user.email === email)
 
     if (exist) {
-        error.innerHTML = "Такий користувач вже існує"
+        error.innerHTML = "Користувач з таким email-ом вже існує"
         shakeError(error)
     } else {
         let newUser = {
@@ -45,11 +37,12 @@ btn.addEventListener('click', function () {
         })
         .then(res => res.text())
         .then(() => {
+            // зберігаємо email локально і показуємо анімацію
+            localStorage.setItem("user", email)
             showSuccessAnimation()
         })
     }
 })
-
 
 function showSuccessAnimation() {
     let overlay = document.querySelector('.success-overlay')
@@ -71,50 +64,9 @@ function showSuccessAnimation() {
     }, 2000)
 }
 
-
 function shakeError(el) {
     el.style.animation = 'none'
     setTimeout(() => {
         el.style.animation = 'shake 0.3s'
     }, 10)
 }
-=======
-let all_user
-fetch("/static/data/user.json").then(function(res){
-    return res.json()
-}).then(function(data){all_user = data
-    })
-
-let btn = document.querySelector(".btn-login")
-btn.addEventListener("click",function(){
-    let email = document.getElementById("email").value 
-    let password= document.getElementById("password").value 
-    let exist = false
-    for(let user in  all_user){
-        if(email == user){
-            // НЕМЕНІ ДОДАТИ АНІМАЦІЮ АВТОРИЗАЦІЯ УСПІШНА 
-            exist = true
-        }
-    }
-    if(exist){
-        document.querySelector(".error").innerHTML = "Користувач з таким email-ом вже існує"}
-    else{
-        let user = {[email]:password}
-        fetch("/register", {
-            method:"POST",
-            headers: {
-                "Content-Type": "application/json"
-        },
-        body: JSON.stringify(user)
-    }).then(function(res){
-        return res.text()
-    }).then(function(data){
-        // ДОДАТИ АНІМАЦІЮ УСПІШНГО ПЕРЕХОДУ В КАБІНЕТ
-        localStorage.setItem("user", email)
-        window.location.assign("/cabinet")
-    })
-    }
-    
-
-})
->>>>>>> 967d631ab4fc2f14a033cac7736fb788ce240b6a
