@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>EnglishPro</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/src/icon.svg" type="image/x-icon">
+</head>
+<body>
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="/static/src/icon.svg">EasyEnglish
+            </div>
+
+            <div class="user-profile">
+                <div class="avatar"><img src="/static/src/user.svg"></div>
+                <div class="user-info">
+                    <p class="user-name">Іван Петренко</p>
+                    <p class="user-role">Учень</p>
+                </div>
+            </div>
+
+            <nav class="menu">
+                <p class="menu-div">Завдання</p>
+                
+                <div for="tab-vocab" class="menu-item vocab-btn" id="word">
+                    <span class="icon"><img src="/static/src/languages.svg" ></span> Вивчення слів
+                </div>
+                
+                <div for="tab-audio" class="menu-item audio-btn" id ="audio">
+                    <span class="icon"><img src="/static/src/headphones.svg" ></span> Аудіювання
+                </div>
+                
+                <div for="tab-grammar" class="menu-item grammar-btn" id ="grammar">
+                    <span class="icon"><img src="/static/src/book-text.svg"></span> Граматика
+                </div>
+                
+                <div for="tab-verbs" class="menu-item verbs-btn" id ="verbs">
+                    <span class="icon"><img src="/static/src/clock.svg"></span> Дієслова та часи
+                </div>
+            </nav>
+
+            <div class="logout-section">
+                <div class="menu-item btn-log-out"><img src="/static/src/log-out.svg"> Вийти</div>
+            </div>
+        </aside>
+
+        <div class="content-area">
+            <h1 style="text-align: center;margin-top: 200px;">Обери одне із завдань. <br>
+                Та розпочни навчання!
+            </h1>
+        </div>
+
+        <script src="/static/cabinet.js" defer></script>
+</body>
+</html>
