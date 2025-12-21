@@ -1,38 +1,79 @@
-let all_users
-fetch('/static/data/user.json').then(function(res){
-    return res.json()
-}).then(function(data){
-    all_users = data
-})
+let all_users = []
+
+// отримуємо користувачів
+fetch('/static/data/user.json')
+    .then(res => res.json())
+    .then(data => {
+        all_users = data
+    })
 
 let btn = document.querySelector('.btn-login')
-btn.addEventListener('click',function(){
-    let email = document.getElementById('email').value
-    let password = document.getElementById('password').value
+
+btn.addEventListener('click', function () {
+    let email = document.getElementById('email').value.trim()
+    let password = document.getElementById('password').value.trim()
+    let error = document.querySelector('.error')
+
+    error.innerHTML = ""
+
     let exist = false
-    for (let user in all_users){
-        if(email == user == all_users){
-            // додати анімацію успішной авторизації
+
+    // перевірка чи існує користувач
+    for (let user of all_users) {
+        if (user.email === email) {
             exist = true
+            break
         }
     }
-    if (exist){    document.querySelector('.error').innerHTML = "Такий користувач вже існує"}
 
-    else{
-        let user = {[email]: password}
+    if (exist) {
+        error.innerHTML = "Такий користувач вже існує"
+        shakeError(error)
+    } else {
+        let newUser = {
+            email: email,
+            password: password
+        }
+
         fetch("/register", {
             method: 'POST',
-            Headers: {
+            headers: {
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify(user)
-        }).then(function(res){
-            return res.text()
-        }).then(function(data){
-
-            window.location.assign('/cabinet')
+            body: JSON.stringify(newUser)
+        })
+        .then(res => res.text())
+        .then(() => {
+            showSuccessAnimation()
         })
     }
-
-
 })
+
+
+function showSuccessAnimation() {
+    let overlay = document.querySelector('.success-overlay')
+    let box = overlay.querySelector('.success-box')
+
+    overlay.style.display = 'flex'
+    overlay.style.opacity = '0'
+    box.style.transform = 'scale(0.6)'
+
+    setTimeout(() => {
+        overlay.style.transition = 'opacity 0.4s'
+        box.style.transition = 'transform 0.4s'
+        overlay.style.opacity = '1'
+        box.style.transform = 'scale(1)'
+    }, 50)
+
+    setTimeout(() => {
+        window.location.assign('/cabinet')
+    }, 2000)
+}
+
+
+function shakeError(el) {
+    el.style.animation = 'none'
+    setTimeout(() => {
+        el.style.animation = 'shake 0.3s'
+    }, 10)
+}

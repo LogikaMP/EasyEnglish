@@ -1,25 +1,58 @@
-<!DOCTYPE html>html>
-<html lang="uk">    
-    <linl rel="stylesheet" href="login.css">    
-<div id="loginModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/src/icon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EasyEnglish</title>
+</head>
+<body>
 
-            <div class="login-box">
-                <h2>Вхід в EnglishPro</h2>
+<div class="logo-reg">
+    <a href="/" class="btn-back">
+        <img src="/static/src/arrow-left.svg" alt="Назад">
+        Назад на головну
+    </a>
 
-                <label>Електронна пошта</label>
-                <input type="email" placeholder="your@email.com">
+    <div class="logo-form">
+        <img src="/static/src/icon.svg" alt="EasyEnglish">
+        <h2>Вхід в EasyEnglish</h2>
+        <p>Увійдіть до свого облікового запису</p>
 
-                <label>Пароль</label>
-                <input type="password" placeholder="********">
+        <p class="error"></p>
 
-                <button class="login-submit">Увійти</button>
-
-                <p class="register-link">
-                    Немає акаунту? <a href="#">Зареєструватися</a>
-                </p>
+        <form class="login-form">
+            <label for="email">Введи пошту</label>
+            <div class="input">
+                <img src="/static/src/mail.svg" alt="Email">
+                <input type="email" id="email" name="email" required placeholder="Введи пошту">
             </div>
-        </div>
+
+            <label for="password">Введи пароль</label>
+            <div class="input">
+                <img src="/static/src/lock.svg" alt="Password">
+                <input type="password" id="password" name="password" required placeholder="Введи пароль">
+            </div>
+
+            <div class="btn-login">Увійти</div>
+        </form>
+
+        <p class="register-link">
+            Ще немає облікового запису?
+            <a href="/register">Зареєструватися</a>
+        </p>
     </div>
+</div>
+
+
+<div class="success-overlay">
+    <div class="success-box">
+        <div class="check">✓</div>
+        <p>Успішний вхід</p>
+    </div>
+</div>
+
+<script src="/static/login.js" defer></script>
+</body>
 </html>
