@@ -13,20 +13,22 @@ def login():
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
-    if request.method == 'POST':
+    if request.method == "POST":
         new_user = request.get_json()
-        with open("static/data/user.json", "r")as f:
+        with open("static/data/user,json", "r")as f:
             all_users = json.load(f)
         all_users.update(new_user)
 
-        with open("static/data/user.json", "w")as f:
-            json.dump(all_users,f)
+        with open("static/data/user.json", "w",)as f:
+            json.dump(all_users, f)
+        return "ok"
+
 
     return render_template('register.html')
 
+@app.route("/cabinet")
+def cabinet():
+    return render_template("cabinet.html")
+
 if __name__ == '__main__':
     app.run(debug=True)
-
-    @app.route("/cabinet")
-    def cabinet():
-        return render_template("cabinet.html")
