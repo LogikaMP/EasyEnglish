@@ -1,0 +1,795 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600&family=Pacifico&display=swap');
+
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #90e0ef;
+    font-family: 'Caveat', cursive;
+    color: #03045e;
+}
+
+
+h1, h2, h3, h4 {
+    font-family: 'Pacifico', cursive;
+    color: #03045e;
+    margin: 0;
+}
+a {
+    text-decoration: none;
+    color: #023e8a;
+}
+a:hover {
+    color: #0077b6;
+}
+
+
+.navbar {
+    width: 100%;
+    height: 80px;
+    background: #03045e;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-icon img {
+    width: 45px;
+    height: 45px;
+}
+.logo-text{
+    color: white;
+}
+
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.logo {
+    width: 20%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ade8f4;
+    font-size: 22px;
+    margin-left: 3%;
+}
+
+.nav-menu {
+    width: 40%;
+    list-style: none;
+    display: flex;
+    gap: 40px;
+}
+.nav-menu a {
+    color: #90e0ef;
+    font-size: 22px;
+}
+.nav-menu a:hover {
+    color: #48cae4;
+}
+.login-btn img{
+    filter: brightness(0) saturate(100%) invert(2%) sepia(100%) saturate(7500%) hue-rotate(200deg) brightness(90%) contrast(105%);
+
+}
+
+.login-btn {
+    width: 8%;
+    background: #00b4d8;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 6px;
+    font-size: 24px;
+    text-align: center;
+    color: #03045e;
+    cursor: pointer;
+    margin-right: 3%;
+    display: flex;
+    justify-content: space-between;
+}
+.login-btn:hover {
+    background: #0096c7;
+}
+
+
+.hero {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(45deg, #03045e, #023e8a, #0077b6, #0096c7);
+    color: white;
+}
+
+.hero-image {
+    width: 160px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #ade8f4;
+    max-width: 700px;
+    margin: 10px auto;
+    font-size: 24px;
+}
+
+.features {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.features-title {
+    font-size: 34px;
+}
+
+.features-subtitle {
+    font-size: 26px;
+    margin-bottom: 40px;
+}
+
+.cards {
+    max-width: 1000px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    background: #ade8f4;
+    border: 3px solid #0096c7;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: left;
+}
+
+.card h3 {
+    margin: 0 0 10px;
+    font-size: 28px;
+}
+
+.card p {
+    font-size: 22px;
+    color: #023e8a;
+}
+
+.card-icon {
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+.card:nth-child(1) .card-icon {
+    background: #0077b6;
+
+}
+.card:nth-child(2) .card-icon {
+    background: #0096c7;
+
+}
+.card:nth-child(3) .card-icon {
+    background: #00b4d8;
+
+}
+.card:nth-child(4) .card-icon {
+    background: #48cae4;
+
+}
+.card-icon img, .floating-icons img{
+    filter: invert(1);
+}
+.floating-icons .icon:nth-child(1){
+    background: #0077b6;
+
+}
+.floating-icons .icon:nth-child(2) {
+    background: #0096c7;
+
+}
+.floating-icons .icon:nth-child(3)  {
+    background: #00b4d8;
+
+}
+.floating-icons .icon:nth-child(4) {
+    background: #48cae4;
+
+}
+
+.floating-icons {
+    position: fixed;
+    right: 25px;
+    top: 250px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.floating-icons .icon {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    display: flex;
+    font-size: 24px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.floating-icons .icon:hover {
+    background: #0096c7;
+}
+
+.footer {
+    width: 100%;
+    background: #03045e;
+    color: #ade8f4;
+    padding: 50px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    width: 60%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-logo{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.footer-brand{
+    width: 15%;
+    margin-left: 10px;
+}
+.footer-desc{
+    font-size: 20px;
+
+}
+
+.footer-list{
+    width: 40%;
+    list-style: none;
+    font-size: 20px;
+    
+
+}
+
+.footer ul{
+    list-style: none;
+    color: #90e0ef;
+}
+
+.footer ul li a{
+    color: white;
+}
+
+.footer-cont{
+    color: white;
+}
+
+.footer-cont img{
+    filter: invert(1);
+
+}
+
+.footer-bottom{
+    width: 100%;
+    margin: 10px 0;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #90e0ef;
+}
+
+.social-icons{
+    display: flex;
+    gap: 15px;
+    width: 30%;
+}
+
+.social-icons img{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    filter: invert(1);
+}
+
+/* lofin page */
+
+.logo-reg {
+    width: 100%;
+    height: 100vh;
+    background: #90e0ef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    font-family: 'Caveat', cursive;
+    box-shadow: 8px -2px 5px 4px rgba(0,0,0,0.44);
+    -webkit-box-shadow: 8px -2px 5px 4px rgba(0,0,0,0.44);
+    -moz-box-shadow: 8px -2px 5px 4px rgba(0,0,0,0.44);
+}
+
+.btn-back {
+    font-size: 20px;
+    color: #03045e;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    left: -10%;
+}
+
+.logo-form {
+    background: white;
+    padding: 40px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #023e8a;
+    width: 350px;
+    border: 2px solid #023e8a;
+}
+
+.logo-form img {
+    width: 80px;
+    height: 80px;
+}
+
+.logo-form p{
+    font-size: 25px;
+}
+
+.login-form{
+    text-align: left;
+}
+
+label {
+    font-size: 20px;
+    margin-left: 6%;
+}  
+
+.input{
+    display: flex;
+}
+
+input{
+    color: #03045e;
+    background: #90e0ef;
+    width: 100%;
+    padding: 10px 40px;
+    margin: 10px 0 20px 0;
+    border: 2px solid #0077b6;
+    border-radius: 6px;
+    font-size: 18px;
+}
+
+input::placeholder{
+    color: #03045e;
+    font-size: 15px;
+}
+
+.input img{
+    width: 10%;
+    height: auto;
+    position: relative;
+    top: -4px;
+    left: 35px;
+    filter: invert(1);
+}
+
+.btn-login{
+    width: 95%;
+    margin-left: 6%;
+    background: #03045e;
+    border: none;
+    padding: 10px 0;
+    border-radius: 6px;
+    font-size: 24px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+
+.register-link a{
+    color: #0077b6;
+
+}
+
+.register-link{
+    font-size: 15px;
+}
+
+.error {
+    color: red
+}
+/* cabinet */
+
+/* САЙДБАР */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 25%;
+    background-color: #000055;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.4em;
+    height: 100%;
+}
+
+.sidebar .logo { 
+    width: 75%;
+    padding: 15px 10%; 
+    font-weight: bold; 
+    font-size: 1em;
+    color: white;
+    border-bottom: 2px solid #ade8f4;
+   
+}
+.sidebar .logo img{
+    width: 30%;
+    height: auto;
+}
+.user-profile{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 75%;
+     border-radius: 10px;
+     background-color: #023e8a;
+     padding: 5px;
+     margin: 20px 10%;
+     font-size: 0.8em;
+}
+.avatar{
+    border-radius: 50%;
+    background-color: #90e0ef;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.avatar img, .menu-item img{
+    width: 30px;
+    height: 30px;
+    filter: invert(1);
+    
+}
+.user-info{
+    display: flex;
+    flex-direction: column;
+}
+.user-info p{
+    margin: 0;
+}
+.menu{
+    display: flex;
+    text-align: left;
+    color: white;
+    flex-direction: column;
+    gap: 5px;
+    font-size: 0.9em;
+    justify-content: flex-start;
+    padding: 30px 10%;
+    border-bottom: 2px solid #ade8f4;
+    border-top: 2px solid #ade8f4;
+}
+.menu p{
+    margin: 0;
+}
+/* КОНТЕНТ */
+.content-area {
+    width: 74%;
+    position: relative;
+    left: 25%;
+    height: 100%;
+    top: 0;
+   
+}
+.menu-item{
+    display: flex;
+    text-align: left;
+    gap: 15px;
+    padding: 2%;
+    border-radius: 10px;
+    width: 70%;
+}
+.logout-section{
+    width: 75%;
+    padding: 10px 10%;
+}
+
+/*  */
+/*стилі для карток*/
+/* все спільне */
+
+.test.page {
+    height: 100%;
+    width: 94%;
+    background: #c9f2f8;
+    padding: 30px;
+    font-family: "Segoe UI", sans-serif;
+    font-size: 1em;
+}
+.test.page p{
+    font-size: 1em;
+    margin: 0;
+}
+
+.test.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #0b2c5d;
+}
+
+.test.stats {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.test.card {
+    background: #fff;
+    border-radius: 14px;
+    padding: 20px;
+    width: 100%;
+    color: #0b2c5d;
+}
+
+.test.card span {
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.test.divider {
+    height: 10px;
+    background: #4fbcd8;
+    border-radius: 20px;
+    margin: 30px 0;
+}
+
+.test.main {
+    background: #fff;
+    border-radius: 20px;
+    padding: 10px;
+    text-align: center;
+}
+
+.test.label {
+    color: #0b2c5d;
+}
+
+
+.test.input {
+    width: 80%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 2px solid #b7ecf3;
+    font-size: 16px;
+    margin-top: 20px;
+    margin-left: 10%;
+}
+
+.test.input:focus {
+    outline: none;
+    border-color: #4fbcd8;
+}
+
+/* кнопки і анімація */
+
+.test.button {
+   
+    padding: 14px 36px;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.test.button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.test.button.primary {
+    background: #0b2c5d;
+    color: #fff;
+}
+
+.test.button.primary:hover {
+    background: #123a7a;
+}
+
+.test.button.secondary {
+    background: #0a7bbd;
+    color: #fff;
+}
+
+/* для слів */
+
+.word .current {
+    font-size: 36px;
+    font-weight: 700;
+    margin: 20px 0;
+    color: #0b2c5d;
+}
+
+/* для аудіо */
+
+.audio .level {
+    display: inline-block;
+    background: #14b8c4;
+    color: #fff;
+    padding: 6px 18px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.audio .level:hover{
+    background: #123a7a;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.audio .sentence {
+    background: #d9f7fb;
+    padding: 18px;
+    border-radius: 14px;
+    margin: 20px 0;
+    color: #0b2c5d;
+    width: 80%;
+    margin-left: 10%;
+}
+
+/* для дієслів */
+
+.verbs-title {
+    color: #0b2c5d;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.verbs-tabs {
+    display: flex;
+    background: #bfeef8;
+    border-radius: 20px;
+    padding: 6px;
+    margin-bottom: 20px;
+}
+
+.verbs-tab {
+    flex: 1;
+    border: none;
+    background: transparent;
+    padding: 10px;
+    border-radius: 14px;
+    cursor: pointer;
+    color: #0b2c5d;
+}
+
+.verbs-tab.active {
+    background: #0b7db6;
+    color: #fff;
+}
+
+.verbs-header {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 20px;
+    color: #0b2c5d;
+}
+
+.verbs-icon {
+    width: 36px;
+    height: 36px;
+    background: #0b7db6;
+    color: #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.verbs-example {
+    background: #c9f2fb;
+    padding: 16px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.verbs-task {
+    margin-bottom: 12px;
+    color: #0b2c5d;
+}
+
+.verbs-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+}
+
+.verbs-row label {
+    width: 50px;
+    font-weight: 500;
+    color: #0b2c5d;
+}
+
+/* прогрес бар */
+
+.test.progress-bar {
+    height: 10px;
+    background: #aee7ef;
+    border-radius: 20px;
+    margin: 20px 0;
+    overflow: hidden;
+}
+
+.test.progress-fill {
+    width: 0%;
+    height: 100%;
+    background: #0b2c5d;
+}
+
+/*для граматики*/
+
+.grammar-page {
+    background: #d9f7fb;
+}
+
+.grammar-sentence {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.grammar-words {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.grammar-word {
+    width: 80%;
+    padding: 10px 16px;
+    border-radius: 12px;
+    border: 2px solid #8fe3f2;
+    background: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    gap: 10px;
+    text-align: left;
+}
+
+.grammar-word:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.15);
+}
+
+.grammar-word.active {
+    background: #0b7db6;
+    color: #fff;
+    border-color: #0b7db6;
+}
