@@ -29,7 +29,7 @@ btn.addEventListener("click",function(){
         return res.text()
     }).then(function(data){
         // ДОДАТИ АНІМАЦІЮ УСПІШНГО ПЕРЕХОДУ В КАБІНЕТ
-        localStorage.setItem("user", email)
+        localStorage.setItem("user",email)
         window.location.assign("/cabinet")
     })
     }

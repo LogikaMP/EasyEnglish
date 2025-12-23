@@ -11,7 +11,7 @@ btn.addEventListener("click",function(){
     for(let user in  all_user){
         if(email == user && password == all_user[user]){
             // НЕМЕНІ ДОДАТИ АНІМАЦІЮ АВТОРИЗАЦІЯ УСПІШНА 
-            localStorage.setItem("user", email)
+            localStorage.setItem("user",email)
             window.location.assign("/cabinet")
         }
     }
