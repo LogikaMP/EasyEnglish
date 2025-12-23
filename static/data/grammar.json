@@ -1,0 +1,64 @@
+{
+  "grammar": [
+    {
+      "correct": "I bought a new car last week.",
+      "wr1": "Last week I a new car bought.",
+      "wr2": "I last week bought a new car.",
+      "wr3": "Bought I a new car last week."
+    },
+    {
+      "correct": "He is always late for work.",
+      "wr1": "He always is late for work.",
+      "wr2": "Always he is late for work.",
+      "wr3": "He is late always for work."
+    },
+    {
+      "correct": "Who broke the window?",
+      "wr1": "Who did break the window?",
+      "wr2": "Who does break the window?",
+      "wr3": "Who the window broke?"
+    },
+    {
+      "correct": "We went to the cinema at 7 o'clock.",
+      "wr1": "We went at 7 o'clock to the cinema.",
+      "wr2": "At 7 o'clock to the cinema we went.",
+      "wr3": "To the cinema at 7 o'clock we went."
+    },
+    {
+      "correct": "She doesn't like apples.",
+      "wr1": "She doesn't likes apples.",
+      "wr2": "She likes not apples.",
+      "wr3": "She not likes apples."
+    },
+    {
+      "correct": "What are you doing?",
+      "wr1": "What you are doing?",
+      "wr2": "Are what you doing?",
+      "wr3": "What doing are you?"
+    },
+    {
+      "correct": "I have a small black dog.",
+      "wr1": "I have a black small dog.",
+      "wr2": "I have a dog small black.",
+      "wr3": "Small black I have a dog."
+    },
+    {
+      "correct": "I have never been to Paris.",
+      "wr1": "I never have been to Paris.",
+      "wr2": "I have been never to Paris.",
+      "wr3": "Never I have been to Paris."
+    },
+    {
+      "correct": "Can you tell me where the bank is?",
+      "wr1": "Can you tell me where is the bank?",
+      "wr2": "Do you know where does he live?",
+      "wr3": "I wonder what time is it."
+    },
+    {
+      "correct": "He gave the book to me.",
+      "wr1": "He gave to me the book.",
+      "wr2": "He me gave the book.",
+      "wr3": "He gave me to the book."
+    }
+  ]
+}
