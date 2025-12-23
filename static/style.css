@@ -511,6 +511,15 @@ input::placeholder{
     width: 75%;
     padding: 10px 10%;
 }
+.btn-log-out{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.btn-log-out img{
+    filter: invert(1);
+}
 
 /*  */
 /*стилі для карток*/
