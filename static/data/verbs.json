@@ -1,0 +1,94 @@
+{
+  "verbs": [
+    {
+      "verb": "to work",
+      "Tense": "Present Simple (теперішній)",
+      "I": "work",
+      "You": "work",
+      "He/She/It": "works",
+      "We": "work",
+      "They": "work"
+    },
+    {
+      "verb": "to go",
+      "Tense": "Past Simple (минулий)",
+      "I": "went",
+      "You": "went",
+      "He/She/It": "went",
+      "We": "went",
+      "They": "went"
+    },
+    {
+      "verb": "to eat",
+      "Tense": "Future Simple (майбутній)",
+      "I": "will eat",
+      "You": "will eat",
+      "He/She/It": "will eat",
+      "We": "will eat",
+      "They": "will eat"
+    },
+    {
+      "verb": "to be",
+      "Tense": "Present Simple (бути)",
+      "I": "am",
+      "You": "are",
+      "He/She/It": "is",
+      "We": "are",
+      "They": "are"
+    },
+    {
+      "verb": "to be",
+      "Tense": "Past Simple (був/були)",
+      "I": "was",
+      "You": "were",
+      "He/She/It": "was",
+      "We": "were",
+      "They": "were"
+    },
+    {
+      "verb": "to study",
+      "Tense": "Present Simple (навчатися)",
+      "I": "study",
+      "You": "study",
+      "He/She/It": "studies",
+      "We": "study",
+      "They": "study"
+    },
+    {
+      "verb": "to see",
+      "Tense": "Past Simple (бачити - неправильне)",
+      "I": "saw",
+      "You": "saw",
+      "He/She/It": "saw",
+      "We": "saw",
+      "They": "saw"
+    },
+    {
+      "verb": "to sleep",
+      "Tense": "Future Simple (спати)",
+      "I": "will sleep",
+      "You": "will sleep",
+      "He/She/It": "will sleep",
+      "We": "will sleep",
+      "They": "will sleep"
+    },
+    {
+      "verb": "to have",
+      "Tense": "Present Simple (мати)",
+      "I": "have",
+      "You": "have",
+      "He/She/It": "has",
+      "We": "have",
+      "They": "have"
+    },
+    {
+      "verb": "to do",
+      "Tense": "Past Simple (робити)",
+      "I": "did",
+      "You": "did",
+      "He/She/It": "did",
+      "We": "did",
+      "They": "did"
+    }
+  ]
+}
