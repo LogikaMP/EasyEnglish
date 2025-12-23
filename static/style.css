@@ -410,11 +410,6 @@ input::placeholder{
     font-size: 15px;
 }
 
-<<<<<<< HEAD
-.error{
-    color: red;
-}
-=======
 .error {
     color: red
 }
@@ -798,4 +793,3 @@ input::placeholder{
     color: #fff;
     border-color: #0b7db6;
 }
->>>>>>> 967d631ab4fc2f14a033cac7736fb788ce240b6a
