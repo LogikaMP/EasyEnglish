@@ -21,6 +21,18 @@ def register():
 
         with open("static/data/user.json", "w",)as f:
             json.dump(all_users, f)
+        with open("static/data/progres.json","r")as f:
+            progres = json.load(f)
+        name = list (new_user.keys())[0]
+        new_progres = {name: {
+            "word": [0,0,0], 
+            "audio": [0,0,0], 
+            "grammar": [0,0,0], 
+            "verbs": [0,0,0], 
+        }}
+        progres.update(new_progres)
+        with open("static/data/progres.json","w")as f:
+            json.dumb(progres, f)
         return "ok"
 
 
