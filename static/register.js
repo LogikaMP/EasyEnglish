@@ -6,8 +6,8 @@ fetch("/static/data/user.json").then(function(res){
 
 let btn = document.querySelector(".btn-login")
 btn.addEventListener("click",function(){
-    let email = document.getElementById("email").value 
-    let password= document.getElementById("password").value 
+    let email = document.getElementById("email2").value 
+    let password= document.getElementById("password2").value 
     let exist = false
     for(let user in  all_user){
         if(email == user){
