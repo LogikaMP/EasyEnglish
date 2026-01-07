@@ -1,10 +1,13 @@
-function loadWorld(){
-    function updateProgress(){
-        document.querySelector('.total.').innerhtml = proress[cabinet_user]['world'][2]
-        document.querySelector('.right').innerhtml = proress[cabinet_user]['world'][0]
-        document.querySelector('.progress').innerhtml = proress[cabinet_user]['world'][1]
-    }       
-    let ln1 = 'en'
-    let ln2 = 'ua'
+function load_word(word){
+    function update_prograss(){
+        document.querySelector(".total").innerHTML = progress[cabinet_user]["word"][2]
+        document.querySelector(".right").innerHTML = progress[cabinet_user]["word"][0]
+        document.querySelector(".progress").innerHTML = progress[cabinet_user]["word"][0]
+    }
+    let ln1 = "en"
+    let ln2 = "ua"
+    
+
+    update_prograss()
 }
-loadWorld();
+load_word()
