@@ -1,5 +1,6 @@
 let progress = {}
 let tasks = {}
+
 let  cabinet_user =localStorage.getItem("user")
 document.querySelector(".user-name").innerHTML = cabinet_user
 let btns = document.querySelectorAll(".menu-item")
@@ -14,28 +15,31 @@ for(let btn  of btns) {
         this.style.background = "#0077b6"
         let name = this.id
         let file = "/static/cards/" + name + ".html" 
-        let file_tasks = "/static/data/" + "word.json"
+        let file_tasks = "/static/data/" + name + ".json"
+        
         fetch(file_tasks).then(function(res){
             return res.json()
 
         }).then(function(data){
             tasks = data[name]
+        })
 
-        })
-        fetch("/static/data/progres.json").then(function(res){
-        return res.json()
-        })
-        .then(function(data){
-            progress=data
+        fetch("/static/data/progress.json").then(function(res){
+            return res.json()
+
+        }).then(function(data){
+            progress = data
         })
 
         fetch(file).then(function(res){
             return res.text()
         }).then(function(html){
+
+            document.querySelector(".content-area").innerHTML = html
             let script = document.createElement("script")
             script.src = "/static/" + name + ".js"
             script.defer = true 
-            document.body.querySelector(".content-area").appendChild(script)
+            document.querySelector(".content-area").appendChild(script)
         })
     })
 }
