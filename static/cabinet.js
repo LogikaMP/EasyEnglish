@@ -1,3 +1,13 @@
+function rewrite_progress(){
+    if (progress != {}) {
+        fetch("/cabinet",{
+            method: "POST",
+            headers:{"content-type":"application/json"},
+            body: progress.json()
+        })
+    }
+}
+
 let progress = {}
 let tasks = {}
 let  cabinet_user =localStorage.getItem("user")
@@ -11,6 +21,7 @@ function del_bg_btns(){
 for(let btn  of btns) {
     btn.addEventListener("click", function(){
         del_bg_btns()
+        rewrite_progress()
         this.style.background = "#0077b6"
         let name = this.id
         let file = "/static/cards/" + name + ".html" 
