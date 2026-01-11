@@ -35,8 +35,14 @@ def register():
             json.dump(progress, file)
     return render_template('register.html')
 
-@app.route("/cabinet")
+@app.route("/cabinet", methods=['GET', 'POST'])
 def cabinet():
+    if request.method == 'POST':
+        # Here you would normally handle login logic
+        progress = request.get_json()
+        with open("static/data/progress.json", "w") as file:
+            json.dump(progress, file)
+        return "ok"
     return render_template("cabinet.html")
 
 if __name__ == '__main__':
