@@ -39,8 +39,13 @@ def register():
 
     return render_template('register.html')
 
-@app.route("/cabinet")
+@app.route("/cabinet", methods=['GET', 'POST'])
 def cabinet():
+    if request.method == "POST":
+        progress  = request.get_json()
+        with open("static/data/progress.json", "w")as f:
+            json.dump(progress, f)
+        return "ok"
     return render_template("cabinet.html")
 
 if __name__ == '__main__':

@@ -1,9 +1,9 @@
 function rewrite_progress(){
-    if (progress != {}) {
+    if (Object.keys(progress).length > 0) {
         fetch("/cabinet",{
             method: "POST",
-            headers:{"content-type":"application/json"},
-            body: progress.json()
+            headers:{"Content-Type": "application/json"},
+            body: JSON.stringify(progress)
         })
     }
 }
