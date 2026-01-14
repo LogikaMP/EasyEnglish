@@ -1,16 +1,15 @@
-function rewrite_progress(name,value){
-    if (progress != {}){
-        fetch("/cabinet", {
+function rewrite_progress(){
+    if (Object.keys(progress).length > 0) {
+        fetch("/cabinet",{
             method: "POST",
-            headers: {"content/type":"application/json"},
-            body:progress.json()
-
+            headers:{"Content-Type": "application/json"},
+            body: JSON.stringify(progress)
         })
-        
     }
 }
+
 let progress = {}
-let task = {}
+let tasks = {}
 let  cabinet_user =localStorage.getItem("user")
 document.querySelector(".user-name").innerHTML = cabinet_user
 let btns = document.querySelectorAll(".menu-item")
@@ -26,21 +25,21 @@ for(let btn  of btns) {
         this.style.background = "#0077b6"
         let name = this.id
         let file = "/static/cards/" + name + ".html" 
+        let file_tasks = "/static/data/" + name + ".json"
+        fetch(file_tasks).then(function(res){
+            return res.json()
+        }).then(function(data){
+            tasks = data[name]
+        })
+        fetch("/static/data/progress.json").then(function(res){
+            return res.json()
+        }).then(function(data){
+            progress = data
+        })
+
         fetch(file).then(function(res){
             return res.text()
         }).then(function(html){
-            fetch("/static/data/progress.json").then(function(res){
-                return res.json()
-            }).then(function(data){
-                progress = data
-            })
-            let file = "/static/data/" + name + ".json"
-            fetch(file).then(function(res){
-                return res.json()
-            }).then(function(data){
-                task = data[name]
-            })
-
             document.querySelector(".content-area").innerHTML = html
             let script = document.createElement("script")
             script.src = "/static/" + name + ".js"
@@ -49,8 +48,7 @@ for(let btn  of btns) {
         })
     })
 }
-document.querySelector(".btn-log-out").addEventListener("click", function(){
-    localStorage.setItem("user", "")
+document.querySelector(".btn-log-out").addEventListener("click", function(){8
      window.location.assign("/login")
 })
 
