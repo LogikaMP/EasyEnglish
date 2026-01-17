@@ -1,37 +1,84 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Вивчення слів</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='src/icon.svg') }}">
+</head>
+<body>
 
+<!-- ЛІВА ПАНЕЛЬ -->
+<div class="sidebar">
 
-<div class="test page word">
-
-    <div class="test header">
-        <h1>Вивчення слів</h1>
-        <button class="test button word">⇄ АНГ → УКР</button>
+    <div class="logo">
+        <img src="{{ url_for('static', filename='src/icon.svg') }}">
     </div>
 
-    <div class="test stats">
-        <div class="test card">
-            <p>Прогрес</p>
-            <span class="progress">progress</span>
-        </div>
-        <div class="test card">
-            <p>Правильно</p>
-            <span class="right">right</span>
-        </div>
-        <div class="test card">
-            <p>Всього</p>
-            <span class="total">total</span>
-        </div>
-    </div>
+    <div class="menu">
+        <a href="{{ url_for('index') }}" class="menu-item">
+            <p>🏠 На головну</p>
+        </a>
 
-    <div class="test divider"></div>
+        <a href="{{ url_for('words') }}" class="menu-item">
+            <p>📘 Вивчення слів</p>
+        </a>
 
-    <div class="test main">
-        <p class="test label word">Англійською:</p>
-        <div class="word current right_ans"></div>
-        <div class="word current"></div>
+        <a href="{{ url_for('audio') }}" class="menu-item">
+            <p>🎧 Аудіювання</p>
+        </a>
 
-        <input class="test input word" placeholder="Введи свою відповідь">
-        <button class="test button primary word">Відповісти</button>
+        <a href="{{ url_for('grammar') }}" class="menu-item">
+            <p>📖 Граматика</p>
+        </a>
+
+        <a href="{{ url_for('verbs') }}" class="menu-item">
+            <p>⏰ Дієслова та часи</p>
+        </a>
     </div>
 
 </div>
 
+<!-- ПРАВА ЧАСТИНА З ТВОЇМ КОНТЕНТОМ -->
+<div class="content-area">
+
+    <div class="test page word">
+
+        <div class="test header">
+            <h1>Вивчення слів</h1>
+            <button class="test button word">⇄ АНГ → УКР</button>
+        </div>
+
+        <div class="test stats">
+            <div class="test card">
+                <p>Прогрес</p>
+                <span class="progress">progress</span>
+            </div>
+            <div class="test card">
+                <p>Правильно</p>
+                <span class="right">right</span>
+            </div>
+            <div class="test card">
+                <p>Всього</p>
+                <span class="total">total</span>
+            </div>
+        </div>
+
+        <div class="test divider"></div>
+
+        <div class="test main">
+            <p class="test label word">Англійською:</p>
+            <div class="word current right_ans"></div>
+            <div class="word current"></div>
+
+            <input class="test input word" placeholder="Введи свою відповідь">
+            <button class="test button primary word">Відповісти</button>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>

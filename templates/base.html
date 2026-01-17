@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}EasyEnglish{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='src/icon.svg') }}">
+</head>
+<body>
+
+<div class="sidebar">
+    <div class="logo">
+        <img src="{{ url_for('static', filename='src/icon.svg') }}">
+    </div>
+
+    <div class="menu">
+        <a href="{{ url_for('index') }}" class="menu-item"><p>🏠 На головну</p></a>
+        <a href="{{ url_for('cabinet') }}" class="menu-item"><p>👤 Кабінет</p></a>
+        <a href="{{ url_for('words') }}" class="menu-item"><p>📘 Вивчення слів</p></a>
+        <a href="{{ url_for('audio') }}" class="menu-item"><p>🎧 Аудіювання</p></a>
+        <a href="{{ url_for('grammar') }}" class="menu-item"><p>📖 Граматика</p></a>
+        <a href="{{ url_for('verbs') }}" class="menu-item"><p>⏰ Дієслова та часи</p></a>
+    </div>
+</div>
+
+<div class="content-area">
+    {% block content %}{% endblock %}
+</div>
+
+</body>
+</html>

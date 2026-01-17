@@ -28,9 +28,9 @@ btn.addEventListener("click", function () {
     });
 });
 function showSuccess() {
-    errorBox.innerHTML = 
+    errorBox.innerHTML = `
         <div class="success">
             Авторизація успішна
         </div>
-    ;
+    `;
 }
