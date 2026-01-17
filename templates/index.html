@@ -7,6 +7,23 @@
     <link rel="stylesheet" href="/static/style.css">
     <link rel="icon" href="/static/src/icon.svg" type="image/x-icon">
 </head>
+<script>
+    const icons = document.querySelectorAll('.floating-icons .icon');
+
+    icons.forEach((icon, index) => {
+        icon.addEventListener('click', () => {
+            icon.style.transform = 'scale(0.85)';
+            icon.style.opacity = '0.7';
+
+            setTimeout(() => {
+                if (index === 0) window.location.href = "/static/cards/word.html";
+                if (index === 1) window.location.href = "/static/cards/audio.html";
+                if (index === 2) window.location.href = "/static/cards/grammar.html";
+                if (index === 3) window.location.href = "/static/cards/verbs.html";
+            }, 200);
+        });
+    });
+</script>
 
 <body>
 

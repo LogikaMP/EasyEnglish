@@ -802,3 +802,24 @@ input::placeholder{
     color: #fff;
     border-color: #0b7db6;
 }
+
+
+
+/* ===== Анімація кліку по круглих іконках ===== */
+
+.floating-icons .icon {
+    transition: 
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        back-ground 0.2s ease;
+}
+
+.floating-icons .icon:hover {
+    transform: scale(1.08);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+}
+
+.floating-icons .icon:active {
+    transform: scale(0.92);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+}
