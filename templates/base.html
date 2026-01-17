@@ -9,13 +9,13 @@
 </head>
 <body>
 
-
 <div class="sidebar">
 
 
     <div class="logo">
         <img src="{{ url_for('static', filename='src/icon.svg') }}">
     </div>
+
 
     <div class="user-profile">
         <div class="avatar">
@@ -27,8 +27,9 @@
         </div>
     </div>
 
+
     <div class="menu">
-        <p style="margin-bottom: 10px;">Завдання</p>
+        <p>Завдання</p>
 
         <a href="{{ url_for('words') }}" class="menu-item">
             <img src="{{ url_for('static', filename='src/languages.svg') }}">
@@ -50,7 +51,6 @@
             <p>Дієслова та часи</p>
         </a>
 
-   
         <a href="{{ url_for('index') }}" class="menu-item">
             <img src="{{ url_for('static', filename='src/home.png') }}">
             <p>На головну</p>
@@ -64,7 +64,6 @@
             <p>Вийти</p>
         </a>
     </div>
-
 </div>
 
 <div class="content-area">
