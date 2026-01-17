@@ -9,19 +9,62 @@
 </head>
 <body>
 
+
 <div class="sidebar">
+
+
     <div class="logo">
         <img src="{{ url_for('static', filename='src/icon.svg') }}">
     </div>
 
-    <div class="menu">
-        <a href="{{ url_for('index') }}" class="menu-item"><p>🏠 На головну</p></a>
-        <a href="{{ url_for('cabinet') }}" class="menu-item"><p>👤 Кабінет</p></a>
-        <a href="{{ url_for('words') }}" class="menu-item"><p>📘 Вивчення слів</p></a>
-        <a href="{{ url_for('audio') }}" class="menu-item"><p>🎧 Аудіювання</p></a>
-        <a href="{{ url_for('grammar') }}" class="menu-item"><p>📖 Граматика</p></a>
-        <a href="{{ url_for('verbs') }}" class="menu-item"><p>⏰ Дієслова та часи</p></a>
+    <div class="user-profile">
+        <div class="avatar">
+            <img src="{{ url_for('static', filename='src/user.svg') }}">
+        </div>
+        <div class="user-info">
+            <p>{{ session.get('user', 'Користувач') }}</p>
+            <small>Учень</small>
+        </div>
     </div>
+
+    <div class="menu">
+        <p style="margin-bottom: 10px;">Завдання</p>
+
+        <a href="{{ url_for('words') }}" class="menu-item">
+            <img src="{{ url_for('static', filename='src/languages.svg') }}">
+            <p>Вивчення слів</p>
+        </a>
+
+        <a href="{{ url_for('audio') }}" class="menu-item">
+            <img src="{{ url_for('static', filename='src/headphones.svg') }}">
+            <p>Аудіювання</p>
+        </a>
+
+        <a href="{{ url_for('grammar') }}" class="menu-item">
+            <img src="{{ url_for('static', filename='src/book-text.svg') }}">
+            <p>Граматика</p>
+        </a>
+
+        <a href="{{ url_for('verbs') }}" class="menu-item">
+            <img src="{{ url_for('static', filename='src/clock.svg') }}">
+            <p>Дієслова та часи</p>
+        </a>
+
+   
+        <a href="{{ url_for('index') }}" class="menu-item">
+            <img src="{{ url_for('static', filename='src/home.png') }}">
+            <p>На головну</p>
+        </a>
+    </div>
+
+
+    <div class="logout-section">
+        <a href="{{ url_for('logout') }}" class="btn-log-out">
+            <img src="{{ url_for('static', filename='src/log-out.svg') }}">
+            <p>Вийти</p>
+        </a>
+    </div>
+
 </div>
 
 <div class="content-area">
