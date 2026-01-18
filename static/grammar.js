@@ -19,38 +19,42 @@ function load_grammar(){
     function load_task(){
         document.querySelector(".test-question.num").innerHTML = index + 1
         let ans= [tasks[index]["correct"],
-        tasks[index]["wrong1"],
-        tasks[index]["wrong2"],
-        tasks[index]["wrong3"]]
+        tasks[index]["wr1"],
+        tasks[index]["wr2"],
+        tasks[index]["wr3"]]
         ans = shuffle(ans) 
         for (let i = 0; i < ans.length; i++){
             ans_btn[i].innerHTML = ans[i]
             if (ans[i] == tasks[index]["correct"]){
                 correct_btn = ans_btn[i]
             }
-        }    
+        } 
+    }
+    for (let i = 0; i < ans_btn.length; i++){
+        ans_btn[i].addEventListener("click", function(){
+            for (let k = 0; k < ans_btn.lenght; k++){
+                ans_btn[k].style.backgroundColor = "#f0f0f0"
+            }
+            this.style.backgroundColor = "#023e8a"
+            let my_ans = this
+        })
     }
     load_task()
-    document.querySelector(".test.button.audio").addEventListener("click", function(){
-        task_audio.play()
-    })
-
-    document.querySelector(".test.button.primary.audio").addEventListener("click", function(){
-        let my_ans = document.querySelector(".test.input.audio")
+    document.querySelector(".test.button.primary.grammar").addEventListener("click", function(){
         let result = ''
-        let right_ans = document.querySelector(".audio.sentence")
-        if(my_ans.value == tasks[index]["en"]){
-            result = "👍"
-            progress[cabinet_user]["audio"][0]++
+        if(my_ans.innerHTML == tasks[index]["correct"]){
+            result = "rgb(51, 255, 0)"
+            progress[cabinet_user]["grammar"][0]++
         }else{
-            result = "👎"
-            progress[cabinet_user]["audio"][1]++
+            result = "#ff0000"
+            progress[cabinet_user]["grammar"][1]++
         }
-        progress[cabinet_user]["audio"][2]++
-        right_ans.innerHTML = result + tasks[index]["en"]+"<br>"+tasks[index]["ua"]
+        progress[cabinet_user]["grammar"][2]++
+        correct_btn.style.backgroundColor = "rgb(51, 255, 0)"
+        my_ans.style.backgroundColor = result
         setTimeout(function(){
-            right_ans.innerHTML = ""
-            my_ans.value = ""
+            correct_btn.style.backgroundColor = "#f0f0f0"
+            my_ans.stye.backgroundColor = "#f0f0f0"
             index++
             if (index >= tasks.length){
                 index = 0
