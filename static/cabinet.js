@@ -1,15 +1,6 @@
-function rewrite_progress(){
-    if (progress != {}) {
-        fetch("/cabinet",{
-            method: "POST",
-            headers:{"content-type":"application/json"},
-            body: progress.json()
-        })
-    }
-}
-
 let progress = {}
 let tasks = {}
+
 let  cabinet_user =localStorage.getItem("user")
 document.querySelector(".user-name").innerHTML = cabinet_user
 let btns = document.querySelectorAll(".menu-item")
@@ -21,18 +12,21 @@ function del_bg_btns(){
 for(let btn  of btns) {
     btn.addEventListener("click", function(){
         del_bg_btns()
-        rewrite_progress()
         this.style.background = "#0077b6"
         let name = this.id
         let file = "/static/cards/" + name + ".html" 
         let file_tasks = "/static/data/" + name + ".json"
+        
         fetch(file_tasks).then(function(res){
             return res.json()
+
         }).then(function(data){
             tasks = data[name]
         })
+
         fetch("/static/data/progress.json").then(function(res){
             return res.json()
+
         }).then(function(data){
             progress = data
         })
@@ -40,6 +34,7 @@ for(let btn  of btns) {
         fetch(file).then(function(res){
             return res.text()
         }).then(function(html){
+
             document.querySelector(".content-area").innerHTML = html
             let script = document.createElement("script")
             script.src = "/static/" + name + ".js"
@@ -48,7 +43,8 @@ for(let btn  of btns) {
         })
     })
 }
-document.querySelector(".btn-log-out").addEventListener("click", function(){8
+document.querySelector(".btn-log-out").addEventListener("click", function(){
+    localStorage.setItem("user", "")
      window.location.assign("/login")
 })
 
