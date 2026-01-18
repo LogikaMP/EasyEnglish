@@ -10,43 +10,29 @@ function load_verbs(){
     let task_verbs = ""
     function load_task(){
         document.querySelector(".verbs").innerHTML = tasks[index]["verb"]
-        document.querySelector(".verbs.tence").innerHTML = tasks[index]["tense"]
-        task_verbs = [tasks[index]["I"],
-        tasks[index]["You"],
-        tasks[index]["He/She/It"],
-        tasks[index]["He/She/It"],
-        tasks[index]["He/She/It"],
-        tasks[index]["We"],
-        tasks[index]["They"]]
+        document.querySelector(".verbs.tense").innerHTML = tasks[index]["tense"]
+        task_verbs = [tasks[index]["I"],tasks[index]["You"],
+            tasks[index]["He/She/It"],tasks[index]["He/She/It"],tasks[index]["He/She/It"],
+            tasks[index]["We"],tasks[index]["They"]]
     }
     load_task()
-
-    }
-
-    document.querySelectorALL(".test.button.primary.verbs").addEventListener("click", function(){
-        let my_ans = document.querySelector(".test_input.verbs")
-        let result = 0
-        for (let i = 0; i < my_ans.length; i++){
-            if (my_ans[i].value == task_verbs[i]){
-                result ++
-                my_ans[i].style.backgroundColor = "url( 55, 225, 0)"
-            } else {
-                my_ans[i].value += "Вірна відповідь" + task_verbs[i] 
-                my_ans[i].style.backgroundColor = "url(255, 0, 0)"
-            } 
-            if (result == my_ans.length){
-                progress[cabinet_user]["verbs"][0]++
-            } else{
-                progress[cabinet_user]["verbs"][1]++    
-            }}
-            
     
+    document.querySelector(".test.button.primary.verbs").addEventListener("click", function(){
+        let my_ans = document.querySelectorAll(".test.input.verbs")
+        let result = ''
+        let right_ans = document.querySelector(".verbs.sentence")
+        if(my_ans.value == tasks[index]["en"]){
+            result = "👍"
+            progress[cabinet_user]["verbs"][0]++
+        }else{
+            result = "👎"
+            progress[cabinet_user]["verbs"][1]++
+        }
         progress[cabinet_user]["verbs"][2]++
+        right_ans.innerHTML = result + tasks[index]["en"]+"<br>"+tasks[index]["ua"]
         setTimeout(function(){
-            for (let i = 0; i < my_ans.length; i++){
-                my_ans[i].style.backgroundColor = "#fff"
-                my_ans[i].value = ""
-            }   
+            right_ans.innerHTML = ""
+            my_ans.value = ""
             index++
             if (index >= tasks.length){
                 index = 0
@@ -55,5 +41,5 @@ function load_verbs(){
             load_task()
         }, 1000)
     })
-
+}
 load_verbs()

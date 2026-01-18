@@ -42,14 +42,14 @@ function load_grammar(){
     document.querySelector(".test.button.primary.grammar").addEventListener("click", function(){
         let result = ''
         if(my_ans.innerHTML == tasks[index]["correct"]){
-            result = "url( 55, 225, 0)"
+            result = "green"
             progress[cabinet_user]["grammar"][0]++
         }else{
-            result = "url(255, 0, 0)"
+            result = "red"
             progress[cabinet_user]["grammar"][1]++
         }
         progress[cabinet_user]["grammar"][2]++
-        correct_btn.style.backgroundColor = "url( 55, 225, 0)"
+        correct_btn.style.backgroundColor = "green"
         my_ans.style.backgroundColor = result
         setTimeout(function(){
             correct_btn.style.backgroundColor = "#fff"
