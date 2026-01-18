@@ -46,7 +46,7 @@ function load_word(){
             my_ans.value = ""
             index++
             if (index >= tasks.length){
-                index = 0
+                tasks.length = 0
             }
             update_progress()
             load_task()
