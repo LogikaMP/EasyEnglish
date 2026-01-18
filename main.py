@@ -18,14 +18,12 @@ def login_required(f):
 
 @app.route('/')
 def index():
-    return render_template(
-        'index.html',
-        is_auth=session.get("user") is not None
-    )
+    return render_template('index.html')
 
 
 @app.route('/login', methods=['GET', 'POST'])
 def login():
+<<<<<<< HEAD
     if request.method == "POST":
         data = request.get_json()
         username = data.get("username")
@@ -40,24 +38,25 @@ def login():
 
         return "error"
 
+=======
+>>>>>>> parent of 85be2a0 (py)
     return render_template('login.html')
-
 
 @app.route('/register', methods=['GET', 'POST'])
 def register():
     if request.method == "POST":
         new_user = request.get_json()
-
-        with open("static/data/user.json", "r") as f:
+        with open("static/data/user.json", "r")as f:
             all_users = json.load(f)
 
         all_users.update(new_user)
 
-        with open("static/data/user.json", "w") as f:
+        with open("static/data/user.json", "w",)as f:
             json.dump(all_users, f)
-
-        with open("static/data/progress.json", "r") as f:
+            
+        with open("static/data/progress.json", "r")as f:
             progress = json.load(f)
+<<<<<<< HEAD
 
         name = list(new_user.keys())[0]
         progress[name] = {
@@ -68,9 +67,21 @@ def register():
         }
 
         with open("static/data/progress.json", "w") as f:
+=======
+        name = list (new_user.keys())[0]
+        new_progress = {name: {
+            "word": [0, 0, 0], 
+            "audio": [0, 0, 0],
+            "grammar": [0, 0, 0], 
+            "verbs": [0, 0, 0],
+        }}
+        progress.update(new_progress)
+        with open("static/data/progress.json", "w")as f:
+>>>>>>> parent of 85be2a0 (py)
             json.dump(progress, f)
 
         return redirect(url_for("index"))
+
 
     return render_template('register.html')
 
@@ -78,6 +89,7 @@ def register():
 @app.route("/cabinet")
 @login_required
 def cabinet():
+<<<<<<< HEAD
     return render_template("cabinet.html")
 
 
@@ -111,5 +123,14 @@ def logout():
     return redirect(url_for("index"))
 
 
+=======
+    if request.method == "POST":
+        progress  = request.get_json()
+        with open("static/data/progress.json", "w")as f:
+            json.dump(progress, f)
+        return "ok"
+    return render_template("cabinet.html")
+
+>>>>>>> parent of 85be2a0 (py)
 if __name__ == '__main__':
     app.run(debug=True)

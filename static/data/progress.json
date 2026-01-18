@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"test@gmail.com": {"word": [2, 1, 3], "audio": [0, 0, 0], "grammar": [0, 0, 0], "verbs": [0, 0, 0]}, "d": {"word": [0, 0, 0], "audio": [0, 0, 0], "grammar": [0, 0, 0], "verbs": [0, 0, 0]}, "da": {"word": [0, 0, 0], "audio": [0, 0, 0], "grammar": [0, 0, 0], "verbs": [0, 0, 0]}}
+=======
+{"test@gmail.com": {"word": [2, 1, 3], "audio": [0, 0, 0], "grammar": [0, 0, 0], "verbs": [0, 0, 0]}}
+>>>>>>> parent of 85be2a0 (py)
