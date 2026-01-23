@@ -733,6 +733,7 @@ input::placeholder{
     display: flex;
     align-items: center;
     gap: 10px;
+    position: relative;
 
 }
 
@@ -801,4 +802,16 @@ input::placeholder{
     background: #0b7db6;
     color: #fff;
     border-color: #0b7db6;
+}
+.right-answers{
+    
+    width: 50%;
+    position: absolute;
+    bottom: 40%;
+    font-size: larger;
+    z-index: 10;
+    background-color: transparent;
+    font-weight: bolder;
+    color: green;
+    text-align: right;
 }
