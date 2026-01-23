@@ -1,36 +1,20 @@
-let btn = document.querySelector(".btn-login");
-let errorBox = document.querySelector(".error");
-
-btn.addEventListener("click", function () {
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-
-    fetch("/login", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            username: email,
-            password: password
-        })
+let all_user
+fetch("/static/data/user.json").then(function(res){
+    return res.json()
+}).then(function(data){all_user = data
     })
-    .then(res => res.text())
-    .then(data => {
-        if (data === "ok") {
-            showSuccess();
-            setTimeout(() => {
-                window.location.href = "/cabinet";
-            }, 1500);
-        } else {
-            errorBox.innerText = "Перевірте логін і пароль";
+    
+let btn = document.querySelector(".btn-login")
+btn.addEventListener("click",function(){
+    let email = document.getElementById("email").value 
+    let password= document.getElementById("password").value 
+    for(let user in  all_user){
+        if(email == user && password == all_user[user]){
+            // НЕМЕНІ ДОДАТИ АНІМАЦІЮ АВТОРИЗАЦІЯ УСПІШНА 
+            localStorage.setItem("user",email)
+            window.location.assign("/cabinet")
         }
-    });
-});
-function showSuccess() {
-    errorBox.innerHTML = `
-        <div class="success">
-            Авторизація успішна
-        </div>
-    `;
-}
+    }
+    document.querySelector(".error").innerHTML = "Перевірте логін і пароль"
+
+})
