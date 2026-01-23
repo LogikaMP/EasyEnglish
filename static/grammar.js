@@ -16,6 +16,7 @@ function load_grammar(){
     let index = 0
     let correct_btn = ""
     let ans_btn = document.querySelectorAll(".grammar-word.grammar")
+    let my_ans
     function load_task(){
        document.querySelector(".num").innerHTML = index + 1
        let ans = [tasks[index]["correct"],tasks[index]["wr1"],
@@ -32,9 +33,11 @@ function load_grammar(){
         ans_btn[i].addEventListener("click", function(){
             for(let k = 0; k<ans_btn.length; k++){
                 ans_btn[k].style.backgroundColor = "#fff"
+                ans_btn[k].style.color = "#03045e"
             }
             this.style.backgroundColor = "#03045e"
-            let my_ans = this
+            this.style.color = "white"
+            my_ans = this
         })
     }
     load_task() 
@@ -51,9 +54,12 @@ function load_grammar(){
         progress[cabinet_user]["grammar"][2]++
         correct_btn.style.backgroundColor = "green"
         my_ans.style.backgroundColor = result
+        correct_btn.style.color =  "white"
         setTimeout(function(){
             correct_btn.style.backgroundColor = "#fff"
             my_ans.style.backgroundColor = "#fff"
+            my_ans.style.color = "#03045e"
+            correct_btn.style.color =  "#03045e"
             index++
             if (index >= tasks.length){
                 index = 0
