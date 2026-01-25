@@ -48,7 +48,11 @@ for(let btn  of btns) {
         })
     })
 }
-document.querySelector(".btn-log-out").addEventListener("click", function(){8
-     window.location.assign("/login")
+document.querySelector(".btn-log-out").addEventListener("click", function(){
+    window.location.assign("/login")
+})
+document.querySelector('.logo.back_home').addEventListener('click', function(){
+    localStorage.setItem('user', '')
+    window.location.assign('/')
 })
 
