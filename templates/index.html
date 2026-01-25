@@ -24,9 +24,9 @@
 
             <ul class="nav-menu">
                 <li><a href="#">Головна</a></li>
-                <li><a href="#">Можливості</a></li>
-                <li><a href="#">Навчання</a></li>
-                <li><a href="#">Контакти</a></li>
+                <li><a href="posib">Можливості</a></li>
+                <li><a href="/login">Навчання</a></li>
+                <li><a href="cont">Контакти</a></li>
             </ul>
 
 
@@ -54,7 +54,7 @@
 
 
     <!-- Можливості -->
-    <section class="features">
+    <section class="features" id ="posib">
         <h2 class="features-title">Можливості платформи</h2>
         <p class="features-subtitle">Всебічний підхід до вивчення англійської мови</p>
 
@@ -88,12 +88,12 @@
 
     <!-- Плаваючі іконки -->
     <div class="floating-icons">
-        <div class="icon"><img src="/static/src/languages.svg"></div>
-        <div class="icon"><img src="/static/src/headphones.svg"></div>
-        <div class="icon"><img src="/static/src/book-text.svg"></div>
-        <div class="icon"><img src="/static/src/clock.svg"></div>
+        <div class="icon demo" id ="word"><img src="/static/src/languages.svg"></div>
+        <div class="icon demo" id ="audio"><img src="/static/src/headphones.svg"></div>
+        <div class="icon demo" id ="grammar"><img src="/static/src/book-text.svg"></div>
+        <div class="icon demo" id ="verbs"><img src="/static/src/clock.svg"></div>
     </div>
-
+    <div class="demo test"></div>
 
     <!-- Футер -->
     <footer class="footer">
@@ -117,7 +117,7 @@
                 </ul>
             </div>
 
-            <div class="footer-cont">
+            <div class="footer-cont" id="cont">
                 <h4>Контакти</h4>
                 <ul>
                     <li><img src="/static/src/mail.svg"> info@EasyEnglish.ua</li>
@@ -142,7 +142,9 @@
             </div>
         </div>
     </footer>
-
+    <script src="/static/index.js"></script>
+</body>
+</html>
 
 
 
