@@ -1,29 +1,35 @@
 let all_user;
 
 fetch("/static/data/user.json")
-    .then(res => res.json())
-    .then(data => {
+    .then(function(res){
+        return res.json();
+    })
+    .then(function(data){
         all_user = data;
     });
 
-document.addEventListener("DOMContentLoaded", () => {
+let btn = document.querySelector(".btn-login");
 
-    const btn = document.querySelector(".btn-login");
+btn.addEventListener("click", function(){
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
 
-    btn.addEventListener("click", function () {
-        let email = document.getElementById("email").value.trim();
-        let password = document.getElementById("password").value.trim();
-
-        if (all_user[email] && all_user[email] === password) {
+    for (let user in all_user){
+        if(email == user && password == all_user[user]){
             localStorage.setItem("user", email);
             window.location.assign("/cabinet");
-        } else {
-            document.querySelector(".error").innerText = "Перевірте логін і пароль";
         }
-    });
+    }
 
-    // поява форми
-    setTimeout(() => {
-        document.querySelector(".logo-form").classList.add("show");
-    }, 200);
+    document.querySelector(".error").innerHTML = "Перевірте логін і пароль";
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector(".logo-form");
+
+    if (form) {
+        setTimeout(() => {
+            form.classList.add("show");
+        }, 300);
+    }
 });
