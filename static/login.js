@@ -18,3 +18,12 @@ btn.addEventListener("click",function(){
     document.querySelector(".error").innerHTML = "Перевірте логін і пароль"
 
 })
+document.addEventListener("DOMContentLoaded", () => {
+    const form = document.querySelector(".logo-form");
+
+    if (form) {
+        setTimeout(() => {
+            form.classList.add("show");
+        }, 300);
+    }
+});

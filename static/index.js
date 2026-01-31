@@ -25,3 +25,15 @@ for (let i = 0; i < btn_demo.length; i++){
         })
     })
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    const hero = document.querySelector(".hero");
+    if (hero) hero.classList.add("show");
+});
+const cards = document.querySelectorAll(".card");
+
+cards.forEach((card, i) => {
+    setTimeout(() => {
+        card.classList.add("show");
+    }, i * 150);
+});

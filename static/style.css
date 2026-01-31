@@ -333,12 +333,19 @@ a:hover {
 .logo-form {
     background: white;
     padding: 40px;
-    border-radius: 12px;
+    border-radius: 14px;
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    color: #023e8a;
     width: 350px;
     border: 2px solid #023e8a;
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    transition: all 0.8s ease;
+
+}
+
+.logo-form.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
 }
 
 .logo-form img {
@@ -823,4 +830,242 @@ input::placeholder{
     top: 10%;
     width: 80%;
     
+}
+
+.logo-reg {
+    background: linear-gradient(
+        -45deg,
+        #ffffff,
+        #f1f1f1,
+        #e6e6e6,
+        #ffffff
+    );
+    background-size: 400% 400%;
+    animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.btn-login {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+.hero h1,.hero p {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s ease;
+}
+
+.hero.show h1,
+.hero.show p {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: 0.6s ease;
+}
+
+.card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 14px 30px rgba(0,0,0,0.15);
+}
+
+.floating-icons .icon {
+    animation: floatIcon 3s ease-in-out infinite;
+}
+
+.floating-icons .icon:nth-child(2) { animation-delay: 0.4s; }
+.floating-icons .icon:nth-child(3) { animation-delay: 0.8s; }
+.floating-icons .icon:nth-child(4) { animation-delay: 1.2s; }
+
+@keyframes floatIcon {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0); }
+}
+
+
+a, button {
+    transition: all 0.25s ease;
+}
+
+a:hover {
+    transform: translateY(-1px);
+}
+/* ============================= */
+/* АНІМАЦІЯ ЛОГІН / РЕЄСТРАЦІЯ */
+/* ============================= */
+
+/* фон */
+.logo-reg {
+    background: linear-gradient(
+        -45deg,
+        #ffffff,
+        #f2f2f2,
+        #eaeaea,
+        #ffffff
+    );
+    background-size: 400% 400%;
+    animation: gradientMove 12s ease infinite;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* перелив */
+@keyframes gradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+.logo-form {
+    background: white;
+    padding: 40px;
+    border-radius: 14px;
+    text-align: center;
+    width: 350px;
+    border: 2px solid #023e8a;
+
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+    transition: all 0.8s ease;
+}
+
+.logo-form.show {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* кнопка */
+.btn-login {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-login:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+/* інпути */
+input:focus {
+    border-color: #0096c7;
+    box-shadow: 0 0 0 3px rgba(0, 150, 199, 0.2);
+}
+/* ===== ANIMATIONS ===== */
+
+@keyframes slideInSidebar {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeUp {
+    from {
+        transform: translateY(40px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes menuItemAppear {
+    from {
+        transform: translateX(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes floatText {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-8px); }
+    100% { transform: translateY(0px); }
+}
+
+.sidebar {
+    animation: slideInSidebar 0.8s ease forwards;
+}
+
+.menu-item {
+    opacity: 0;
+    animation: menuItemAppear 0.6s ease forwards;
+}
+
+.menu-item:nth-child(2) { animation-delay: 0.3s; }
+.menu-item:nth-child(3) { animation-delay: 0.5s; }
+.menu-item:nth-child(4) { animation-delay: 0.7s; }
+.menu-item:nth-child(5) { animation-delay: 0.9s; }
+
+.content-area h1 {
+    animation: fadeUp 1s ease forwards, floatText 4s ease-in-out infinite;
+    opacity: 0;
+    animation-delay: 1s;
+}
+
+.menu-item:hover {
+    transform: translateX(8px);
+    transition: 0.3s;
+}
+
+.hero h1,
+.hero p {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 1s ease forwards;
+}
+
+.hero h1 { animation-delay: 0.3s; }
+.hero p:nth-of-type(1) { animation-delay: 0.6s; }
+.hero p:nth-of-type(2) { animation-delay: 0.9s; }
+
+
+.card {
+    opacity: 0;
+    transform: translateY(40px);
+    animation: fadeUp 0.8s ease forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.3s; }
+.card:nth-child(2) { animation-delay: 0.6s; }
+.card:nth-child(3) { animation-delay: 0.9s; }
+.card:nth-child(4) { animation-delay: 1.2s; }
+
+
+@keyframes floatIcons {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0px); }
+}
+
+.floating-icons .icon {
+    animation: floatIcons 5s ease-in-out infinite;
 }
