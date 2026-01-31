@@ -1,29 +1,19 @@
-let all_user
-fetch("/static/data/user.json").then(function(res){
-    return res.json()
-}).then(function(data){all_user = data
-    })
-    
-let btn = document.querySelector(".btn-login")
-btn.addEventListener("click",function(){
-    let email = document.getElementById("email").value 
-    let password= document.getElementById("password").value 
-    for(let user in  all_user){
-        if(email == user && password == all_user[user]){
-            // НЕМЕНІ ДОДАТИ АНІМАЦІЮ АВТОРИЗАЦІЯ УСПІШНА 
-            localStorage.setItem("user",email)
-            window.location.assign("/cabinet")
-        }
-    }
-    document.querySelector(".error").innerHTML = "Перевірте логін і пароль"
+fetch("/static/data/user.json")
+    .then(res => res.json())
+    .then(users => {
 
-})
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector(".logo-form");
+        document.querySelector(".login-form").addEventListener("submit", function(e){
+            e.preventDefault();
 
-    if (form) {
-        setTimeout(() => {
-            form.classList.add("show");
-        }, 300);
-    }
-});
+            let email = document.getElementById("email").value;
+            let password = document.getElementById("password").value;
+
+            if(users[email] && users[email] === password){
+                localStorage.setItem("user", email);
+                window.location.href = "/cabinet";
+            } else {
+                document.querySelector(".error").innerText = "Перевірте логін і пароль";
+            }
+        });
+
+    });

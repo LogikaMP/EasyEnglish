@@ -1,35 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
-    <link rel="stylesheet" href="/static/style.css">
-    <link rel ="icon" href="/static/src/icon.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> EasyEnglish</title>
+    <title>EasyEnglish — Реєстрація</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/src/icon.svg">
 </head>
-<body>
-    <div class = "logo-reg">
-        <a href="/" class="btn-back"><img src = "/static/src/arrow-left.svg">Назад на головну</a>
-    <div class = "logo-form">
-        <img src = "/static/src/icon.svg">
+
+<body class="auth-bg">
+
+    <a href="/" class="btn-back">
+        <img src="/static/src/arrow-left.svg">Назад на головну
+    </a>
+
+    <div class="logo-form">
+        <img src="/static/src/icon.svg">
         <h2>Реєстрація в EasyEnglish</h2>
         <p>Створіть свій обліковий запис</p>
-        <p class = error></p>
+        <p class="error"></p>
+
         <form class="login-form">
-            <label for="email">Веди пошту</label>
+            <label>Введи пошту</label>
             <div class="input">
-                <img src = "/static/src/mail.svg">
-                <input type="email" id = "email2" class = "email" name = "email" required placeholder="Веди пошту">
+                <img src="/static/src/mail.svg">
+                <input type="email" id="email" required placeholder="Введи пошту">
             </div>
-            <label for="password">Веди пароль</label>
+
+            <label>Введи пароль</label>
             <div class="input">
-                <img src = "/static/src/lock.svg">
-                <input type="password" id = "password2" class = "password" name = "password" required placeholder="Веди пароль">
+                <img src="/static/src/lock.svg">
+                <input type="password" id="password" required placeholder="Введи пароль">
             </div>
-            <div type="submit" class="btn-login">Зареєструватися</div>
+
+            <button type="submit" class="btn-login">Зареєструватися</button>
         </form>
-        </div>
     </div>
-    <script src="/static/register.js" defer> </script>
+
+    <script src="/static/register.js" defer></script>
 </body>
 </html>
