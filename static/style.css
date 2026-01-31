@@ -1187,3 +1187,49 @@ input:focus {
     color: red;
     margin-bottom: 10px;
 }
+/* ===== AUTH BACKGROUND FLOW ===== */
+
+.logo-reg {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(
+        -60deg,
+        #ffffff,
+        #caf0f8,
+        #90e0ef,
+        #48cae4,
+        #90e0ef,
+        #ffffff
+    );
+
+    background-size: 600% 600%;
+    animation: bgFlow 14s ease-in-out infinite;
+}
+
+@keyframes bgFlow {
+    0% { background-position: 0% 50%; }
+    25% { background-position: 50% 100%; }
+    50% { background-position: 100% 50%; }
+    75% { background-position: 50% 0%; }
+    100% { background-position: 0% 50%; }
+}
+.btn-login{
+    width: 100%;
+    margin: 20px 0 10px 0;
+    background: #023e8a;
+    border: none;
+    padding: 12px 0;
+    border-radius: 8px;
+    font-size: 22px;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+.login-form{
+    text-align: left;
+    width: 100%;
+}
