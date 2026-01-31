@@ -1,40 +1,41 @@
-let all_user;
-
-fetch("/static/data/user.json")
-    .then(function(res){
-        return res.json();
+let all_user
+fetch("/static/data/user.json").then(function(res){
+    return res.json()
+}).then(function(data){all_user = data
     })
-    .then(function(data){
-        all_user = data;
-    });
 
-let btn = document.querySelector(".btn-login");
-
-btn.addEventListener("click", function(){
-
-    let email = document.getElementById("email2").value;
-    let password = document.getElementById("password2").value;
-
-    if(email === "" || password === ""){
-        document.querySelector(".error").innerHTML = "Заповніть всі поля";
-        return;
+let btn = document.querySelector(".btn-login")
+btn.addEventListener("click",function(){
+    let email = document.getElementById("email2").value 
+    let password= document.getElementById("password2").value 
+    let exist = false
+    for(let user in  all_user){
+        if(email == user){
+            // НЕМЕНІ ДОДАТИ АНІМАЦІЮ АВТОРИЗАЦІЯ УСПІШНА 
+            exist = true
+        }
     }
-
-    // якщо такий користувач вже є
-    if(all_user[email]){
-        document.querySelector(".error").innerHTML = "Такий користувач вже існує";
-        return;
+    if(exist){
+        document.querySelector(".error").innerHTML = "Користувач з таким email-ом вже існує"}
+    else{
+        let user = {[email]:password}
+        fetch("/register", {
+            method:"POST",
+            headers: {
+                "Content-Type": "application/json"
+        },
+        body: JSON.stringify(user)
+    }).then(function(res){
+        return res.text()
+    }).then(function(data){
+        // ДОДАТИ АНІМАЦІЮ УСПІШНГО ПЕРЕХОДУ В КАБІНЕТ
+        localStorage.setItem("user",email)
+        window.location.assign("/cabinet")
+    })
     }
+    
 
-    // додаємо нового користувача
-    all_user[email] = password;
-
-    // зберігаємо в localStorage (як у тебе і було по логіці)
-    localStorage.setItem("user", email);
-
-    // перехід в кабінет
-    window.location.assign("/cabinet");
-});
+})
 
 document.addEventListener("DOMContentLoaded", () => {
     const form = document.querySelector(".logo-form");
@@ -45,3 +46,4 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 300);
     }
 });
+

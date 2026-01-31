@@ -1,41 +1,40 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <link rel="stylesheet" href="/static/style.css">
-    <link rel="icon" href="/static/src/icon.svg">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EasyEnglish</title>
+    <title>EasyEnglish — Реєстрація</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="icon" href="/static/src/icon.svg">
 </head>
-<body>
 
-    <div class="logo-reg">
-        <a href="/" class="btn-back">
-            <img src="/static/src/arrow-left.svg">Назад на головну
-        </a>
+<body class="auth-bg">
 
-        <div class="logo-form">
-            <img src="/static/src/icon.svg">
-            <h2>Реєстрація в EasyEnglish</h2>
-            <p>Створіть свій обліковий запис</p>
-            <p class="error"></p>
+    <a href="/" class="btn-back">
+        <img src="/static/src/arrow-left.svg">Назад на головну
+    </a>
 
-            <form class="login-form">
-                <label>Веди пошту</label>
-                <div class="input">
-                    <img src="/static/src/mail.svg">
-                    <input type="text" id="email2" class="email" placeholder="Веди пошту">
-                </div>
+    <div class="logo-form">
+        <img src="/static/src/icon.svg">
+        <h2>Реєстрація в EasyEnglish</h2>
+        <p>Створіть свій обліковий запис</p>
+        <p class="error"></p>
 
-                <label>Веди пароль</label>
-                <div class="input">
-                    <img src="/static/src/lock.svg">
-                    <input type="password" id="password2" class="password" placeholder="Веди пароль">
-                </div>
+        <form class="login-form">
+            <label>Введи пошту</label>
+            <div class="input">
+                <img src="/static/src/mail.svg">
+                <input type="email" id="email" required placeholder="Введи пошту">
+            </div>
 
-                <div class="btn-login">Зареєструватися</div>
-            </form>
-        </div>
+            <label>Введи пароль</label>
+            <div class="input">
+                <img src="/static/src/lock.svg">
+                <input type="password" id="password" required placeholder="Введи пароль">
+            </div>
+
+            <button type="submit" class="btn-login">Зареєструватися</button>
+        </form>
     </div>
 
     <script src="/static/register.js" defer></script>
