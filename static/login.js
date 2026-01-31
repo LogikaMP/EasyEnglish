@@ -1,35 +1,14 @@
-let all_user;
+document.querySelector(".btn-login").addEventListener("click", function () {
 
-fetch("/static/data/user.json")
-    .then(function(res){
-        return res.json();
-    })
-    .then(function(data){
-        all_user = data;
-    });
+    let email = document.getElementById("email").value.trim();
+    let password = document.getElementById("password").value.trim();
 
-let btn = document.querySelector(".btn-login");
+    let users = JSON.parse(localStorage.getItem("users")) || {};
 
-btn.addEventListener("click", function(){
-    let email = document.getElementById("email").value;
-    let password = document.getElementById("password").value;
-
-    for (let user in all_user){
-        if(email == user && password == all_user[user]){
-            localStorage.setItem("user", email);
-            window.location.assign("/cabinet");
-        }
-    }
-
-    document.querySelector(".error").innerHTML = "Перевірте логін і пароль";
-});
-
-document.addEventListener("DOMContentLoaded", () => {
-    const form = document.querySelector(".logo-form");
-
-    if (form) {
-        setTimeout(() => {
-            form.classList.add("show");
-        }, 300);
+    if (users[email] && users[email] === password) {
+        localStorage.setItem("user", email);
+        window.location.assign("/cabinet");
+    } else {
+        document.querySelector(".error").innerHTML = "Перевірте логін і пароль";
     }
 });
