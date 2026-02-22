@@ -804,7 +804,6 @@ input::placeholder{
     border-color: #0b7db6;
 }
 .right-answers{
-    
     width: 50%;
     position: absolute;
     bottom: 40%;
@@ -820,6 +819,13 @@ input::placeholder{
     position: fixed;
     z-index: 5;
     left: 10%;
-    top: 10%;
+    top: 5%;
     width: 80%;
+    background-color: #000055;
+    padding: 10px;
+    border-radius: 15px;
+    border: 2px solid #0096c7;
+    opacity: 0;
+     height: 90vh;
+    overflow-y: auto;
 }

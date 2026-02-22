@@ -9,7 +9,7 @@ function load_word(){
     update_progress()
     let index = 0
     function load_task(){
-        document.querySelector(".word.current").innerHTML = tasks[index][ln1]
+        document.querySelector(".word.current.task").innerHTML = tasks[index][ln1]
     }
     load_task()
     document.querySelector(".test.button.word").addEventListener("click", function(){
