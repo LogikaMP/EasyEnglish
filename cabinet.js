@@ -52,7 +52,7 @@ document.querySelector(".btn-log-out").addEventListener("click", function(){
      window.location.assign("/login")
 })
 
-document.querySelector(".logo.backhome").addEventListener("click", function(){
+document.addEventListener(".logobackhome").addEventListener("click",function(){
     localStorage.setItem("user", "")
-    window.location.assign("/")
+    window.location.assign("/login")
 })
